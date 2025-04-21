@@ -1,0 +1,429 @@
+{
+  "/repository/StudyNotes/": [
+    {
+      "text": "学习笔记",
+      "items": [
+        {
+          "text": "GIT",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "git-config",
+              "link": "/repository/StudyNotes/GIT/git-config"
+            },
+            {
+              "text": "git-commit-standard",
+              "link": "/repository/StudyNotes/GIT/git-commit-standard"
+            },
+            {
+              "text": "git-cherry-pick",
+              "link": "/repository/StudyNotes/GIT/git-cherry-pick"
+            },
+            {
+              "text": "配置alias别名指令",
+              "link": "/repository/StudyNotes/GIT/配置alias别名指令"
+            }
+          ]
+        },
+        {
+          "text": "HTML",
+          "link": "/repository/StudyNotes/HTML"
+        },
+        {
+          "text": "CSS",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "CSS基础",
+              "link": "/repository/StudyNotes/CSS/CSS基础"
+            },
+            {
+              "text": "两个盒模型",
+              "link": "/repository/StudyNotes/CSS/两个盒模型"
+            },
+            {
+              "text": "CSS选择器优先级",
+              "link": "/repository/StudyNotes/CSS/CSS选择器优先级"
+            },
+            {
+              "text": "CSS布局",
+              "link": "/repository/StudyNotes/CSS/CSS布局"
+            },
+            {
+              "text": "CSS定位",
+              "link": "/repository/StudyNotes/CSS/CSS定位"
+            },
+            {
+              "text": "CSS动画",
+              "link": "/repository/StudyNotes/CSS/CSS动画"
+            },
+            {
+              "text": "格式化上下文BFC",
+              "link": "/repository/StudyNotes/CSS/格式化上下文BFC"
+            },
+            {
+              "text": "实现垂直居中",
+              "link": "/repository/StudyNotes/CSS/实现垂直居中"
+            },
+            {
+              "text": "文本多行时打点",
+              "link": "/repository/StudyNotes/CSS/文本多行时打点"
+            },
+            {
+              "text": "CSS-clearfix消除浮动",
+              "link": "/repository/StudyNotes/CSS/CSS-clearfix消除浮动"
+            },
+            {
+              "text": "CSS_Display(显示)_与_Visibility（可见性）",
+              "link": "/repository/StudyNotes/CSS/CSS_Display(显示)_与_Visibility（可见性）"
+            },
+            {
+              "text": "CSS_中设置透明的方式及区别（opacity，transparent，rgba）",
+              "link": "/repository/StudyNotes/CSS/CSS_中设置透明的方式及区别（opacity，transparent，rgba）"
+            },
+            {
+              "text": "column-_",
+              "link": "/repository/StudyNotes/CSS/column-_"
+            },
+            {
+              "text": "缩放方案",
+              "link": "/repository/StudyNotes/CSS/缩放方案"
+            }
+          ]
+        },
+        {
+          "text": "JS",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "JavaScript的历史",
+              "link": "/repository/StudyNotes/JS/JavaScript的历史"
+            },
+            {
+              "text": "JavaScript设计模式",
+              "link": "/repository/StudyNotes/JS/JavaScript设计模式"
+            },
+            {
+              "text": "浅析URL",
+              "link": "/repository/StudyNotes/JS/浅析URL"
+            },
+            {
+              "text": "浅析_MVC",
+              "link": "/repository/StudyNotes/JS/浅析_MVC"
+            },
+            {
+              "text": "MVC、MVVM的概念和区别",
+              "link": "/repository/StudyNotes/JS/MVC、MVVM的概念和区别"
+            },
+            {
+              "text": "jQuery设计思路",
+              "link": "/repository/StudyNotes/JS/jQuery设计思路"
+            },
+            {
+              "text": "JS数据类型和8个falsy值",
+              "link": "/repository/StudyNotes/JS/JS数据类型和8个falsy值"
+            },
+            {
+              "text": "JS对象基本用法",
+              "link": "/repository/StudyNotes/JS/JS对象基本用法"
+            },
+            {
+              "text": "DOM事件模型",
+              "link": "/repository/StudyNotes/JS/DOM事件模型"
+            },
+            {
+              "text": "事件委托",
+              "link": "/repository/StudyNotes/JS/事件委托"
+            },
+            {
+              "text": "运算符",
+              "link": "/repository/StudyNotes/JS/运算符"
+            },
+            {
+              "text": "扩展运算符",
+              "link": "/repository/StudyNotes/JS/扩展运算符"
+            },
+            {
+              "text": "进程和线程",
+              "link": "/repository/StudyNotes/JS/进程和线程"
+            },
+            {
+              "text": "栈和堆",
+              "link": "/repository/StudyNotes/JS/栈和堆"
+            },
+            {
+              "text": "JS原型",
+              "link": "/repository/StudyNotes/JS/JS原型"
+            },
+            {
+              "text": "原型的继承和Class的继承",
+              "link": "/repository/StudyNotes/JS/原型的继承和Class的继承"
+            },
+            {
+              "text": "Object相关方法",
+              "link": "/repository/StudyNotes/JS/Object相关方法"
+            },
+            {
+              "text": "Set和Map数据结构",
+              "link": "/repository/StudyNotes/JS/Set和Map数据结构"
+            },
+            {
+              "text": "Reflect",
+              "link": "/repository/StudyNotes/JS/Reflect"
+            },
+            {
+              "text": "call、apply、bind_的用法和this",
+              "link": "/repository/StudyNotes/JS/call、apply、bind_的用法和this"
+            },
+            {
+              "text": "JS函数",
+              "link": "/repository/StudyNotes/JS/JS函数"
+            },
+            {
+              "text": "JS_函数的执行时机",
+              "link": "/repository/StudyNotes/JS/JS_函数的执行时机"
+            },
+            {
+              "text": "函数柯里化",
+              "link": "/repository/StudyNotes/JS/函数柯里化"
+            },
+            {
+              "text": "浅拷贝和深拷贝",
+              "link": "/repository/StudyNotes/JS/浅拷贝和深拷贝"
+            },
+            {
+              "text": "闭包和立即执行函数",
+              "link": "/repository/StudyNotes/JS/闭包和立即执行函数"
+            },
+            {
+              "text": "JS数组",
+              "link": "/repository/StudyNotes/JS/JS数组"
+            },
+            {
+              "text": "JS常用循环遍历方法",
+              "link": "/repository/StudyNotes/JS/JS常用循环遍历方法"
+            },
+            {
+              "text": "数组拍平",
+              "link": "/repository/StudyNotes/JS/数组拍平"
+            },
+            {
+              "text": "树形数据处理",
+              "link": "/repository/StudyNotes/JS/树形数据处理"
+            },
+            {
+              "text": "计算数组元素重复个数",
+              "link": "/repository/StudyNotes/JS/计算数组元素重复个数"
+            },
+            {
+              "text": "Promise",
+              "link": "/repository/StudyNotes/JS/Promise"
+            },
+            {
+              "text": "async和await",
+              "link": "/repository/StudyNotes/JS/async和await"
+            },
+            {
+              "text": "typeof_与_instanceof",
+              "link": "/repository/StudyNotes/JS/typeof_与_instanceof"
+            },
+            {
+              "text": "JSON",
+              "link": "/repository/StudyNotes/JS/JSON"
+            },
+            {
+              "text": "变量的解构赋值",
+              "link": "/repository/StudyNotes/JS/变量的解构赋值"
+            },
+            {
+              "text": "JS下载实现",
+              "link": "/repository/StudyNotes/JS/JS下载实现"
+            },
+            {
+              "text": "防抖和节流",
+              "link": "/repository/StudyNotes/JS/防抖和节流"
+            },
+            {
+              "text": "虚拟DOM和DOM_diff",
+              "link": "/repository/StudyNotes/JS/虚拟DOM和DOM_diff"
+            },
+            {
+              "text": "宏任务与微任务",
+              "link": "/repository/StudyNotes/JS/宏任务与微任务"
+            },
+            {
+              "text": "Shadow DOM",
+              "link": "/repository/StudyNotes/JS/Shadow DOM"
+            },
+            {
+              "text": "TypeScript",
+              "link": "/repository/StudyNotes/JS/TypeScript"
+            },
+            {
+              "text": "AJAX",
+              "link": "/repository/StudyNotes/JS/AJAX"
+            },
+            {
+              "text": "Axios_异步请求",
+              "link": "/repository/StudyNotes/JS/Axios_异步请求"
+            }
+          ]
+        },
+        {
+          "text": "HTTP",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "HTTP",
+              "link": "/repository/StudyNotes/HTTP/HTTP"
+            },
+            {
+              "text": "跨域",
+              "link": "/repository/StudyNotes/HTTP/跨域"
+            },
+            {
+              "text": "HTTP1.0、1.1、2.0、3.0协议的特性及区别",
+              "link": "/repository/StudyNotes/HTTP/HTTP1.0、1.1、2.0、3.0协议的特性及区别"
+            },
+            {
+              "text": "TCP",
+              "link": "/repository/StudyNotes/HTTP/TCP"
+            }
+          ]
+        },
+        {
+          "text": "算法",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "基础算法",
+              "link": "/repository/StudyNotes/算法/基础算法"
+            },
+            {
+              "text": "力扣刷题",
+              "link": "/repository/StudyNotes/算法/力扣刷题"
+            }
+          ]
+        },
+        
+        {
+          "text": "工具类",
+          "collapsed": true,
+          "items": [
+            
+            {
+              "text": "nvm",
+              "link": "/repository/StudyNotes/工具类/nvm"
+            },
+            {
+              "text": "nrm",
+              "link": "/repository/StudyNotes/工具类/nrm"
+            },
+            {
+              "text": "正则表达式",
+              "link": "/repository/StudyNotes/工具类/正则表达式"
+            }
+          ]
+        },
+        {
+          "text": "构建",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "性能",
+              "collapsed": true,
+              "items": [
+                
+                {
+                  "text": "Webpack",
+                  "link": "/repository/StudyNotes/构建/性能/Webpack"
+                },
+                {
+                  "text": "性能优化",
+                  "link": "/repository/StudyNotes/构建/性能/性能优化"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "解决方法记录",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Echarts_toolbox_添加全屏",
+              "link": "/repository/StudyNotes/解决方法记录/Echarts_toolbox_添加全屏"
+            },
+            {
+              "text": "js图片网络地址转为文件流",
+              "link": "/repository/StudyNotes/解决方法记录/js图片网络地址转为文件流"
+            },
+            {
+              "text": "如何获取文本宽度",
+              "link": "/repository/StudyNotes/解决方法记录/如何获取文本宽度"
+            },
+            {
+              "text": "正则从字符串中截取出img标签、以及对应src地址",
+              "link": "/repository/StudyNotes/解决方法记录/正则从字符串中截取出img标签、以及对应src地址"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "/repository/TypeScript/": [
+    {
+      "text": "TypeScript",
+      "items": [
+        {
+          "text": "TS运行与调试",
+          "link": "/repository/TypeScript/TS运行与调试"
+        },
+        {
+          "text": "TypeScript数据类型",
+          "link": "/repository/TypeScript/TypeScript数据类型"
+        },
+        {
+          "text": "enum、type、interface",
+          "link": "/repository/TypeScript/enum、type、interface"
+        },
+        {
+          "text": "TypeScript并集和交集",
+          "link": "/repository/TypeScript/TypeScript并集和交集"
+        },
+        {
+          "text": "类型兼容与赋值",
+          "link": "/repository/TypeScript/类型兼容与赋值"
+        },
+        {
+          "text": "深入函数",
+          "link": "/repository/TypeScript/深入函数"
+        },
+        {
+          "text": "泛型",
+          "link": "/repository/TypeScript/泛型"
+        },
+        {
+          "text": "面向对象编程之原型",
+          "link": "/repository/TypeScript/面向对象编程之原型"
+        },
+        {
+          "text": "面向对象之类的TypeScript语法",
+          "link": "/repository/TypeScript/面向对象之类的TypeScript语法"
+        },
+        {
+          "text": "TypeScript全解之模块",
+          "link": "/repository/TypeScript/TypeScript全解之模块"
+        },
+        {
+          "text": "类型体操",
+          "link": "/repository/TypeScript/类型体操"
+        },
+        {
+          "text": "TypeScript_x_JSX_=_TSX",
+          "link": "/repository/TypeScript/TypeScript_x_JSX_=_TSX"
+        }
+      ]
+    }
+  ]
+}
