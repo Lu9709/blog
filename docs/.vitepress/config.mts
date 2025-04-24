@@ -9,7 +9,7 @@ const base = isGitHubPages ? '/blog/' : '/'
 export default defineConfig({
   base,
   title: "白褶的博客",
-  description: "",
+  description: "个人学习笔记和技术博客",
   lang: 'zh-CN',  // 设置整个站点的默认语言
   locales: {
     root: {
@@ -17,7 +17,11 @@ export default defineConfig({
       lang: 'zh-CN'
     },
   },
+  head: [
+    ['link', { rel: 'icon', href: `${base}favicon.ico` }]
+  ],
   themeConfig: {
+    logo: '/logo.svg',
     // 最后更新时间文本配置
     outline: {
       level: [2, 6],
@@ -54,14 +58,34 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '学习笔记', link: '/repository/StudyNotes/GIT/git-config', activeMatch: '/repository/StudyNotes/' }
+      { text: '学习笔记', link: '/repository/StudyNotes/git/git-config', activeMatch: '/repository/StudyNotes/' }
     ],
     // 使用从 catalog 目录读取的侧边栏配置
     sidebar: sidebarConfig,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Lu9709' }
-    ]
+    ],
+    
+    // 文档页脚配置
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+    
+    // 编辑链接配置
+    editLink: {
+      pattern: 'https://github.com/Lu9709/blog/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页'
+    },
+    
+    // 导航菜单标签
+    langMenuLabel: '切换语言',
+    returnToTopLabel: '返回顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '外观',
+    lightModeSwitchTitle: '切换到浅色主题',
+    darkModeSwitchTitle: '切换到深色主题'
   },
   markdown: {
     image: {
