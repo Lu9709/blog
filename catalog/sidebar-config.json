@@ -461,5 +461,16 @@
         }
       ]
     }
+  ],
+  "/repository/React/": [
+    {
+      "text": "React",
+      "items": [
+        {
+          "text": "React组件的生命周期及使用场景",
+          "link": "/repository/React/React组件的生命周期及使用场景"
+        }
+      ]
+    }
   ]
 }

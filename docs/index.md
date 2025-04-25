@@ -24,5 +24,8 @@ features:
   - title: 你不知道的JavaScript
     details: 学习你不知道的JavaScript
     link: /repository/你不知道的JavaScript/作用域和闭包/作用域是什么
+  - title: React
+    details: 学习 React 语法
+    link: /repository/React/React组件的生命周期及使用场景
 ---
 
