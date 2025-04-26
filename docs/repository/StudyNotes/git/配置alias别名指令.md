@@ -2,7 +2,7 @@
 
 bash终端永久配置alias别名指令，`vim ~/.bashrc`
 
-```
+```bash
 alias ga='git add'
 alias gc='git commit'
 alias gcgl='git config --global --list'
@@ -12,5 +12,5 @@ alias glog="git log --color --graph --pretty=format:'\''%Cred%h%Creset -%C(yello
 alias gp='git push'
 alias gs='git status -sb'
 ```
-`:wq`保存退出后执行`source ~/.bashrc`
+`:wq` 保存退出后执行 `source ~/.bashrc`
 

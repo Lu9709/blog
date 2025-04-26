@@ -58,7 +58,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '学习笔记', link: '/repository/StudyNotes/git/git-config', activeMatch: '/repository/StudyNotes/' }
+      { text: '学习笔记', link: '/repository/StudyNotes/git/git-config' }
     ],
     // 使用从 catalog 目录读取的侧边栏配置
     sidebar: sidebarConfig,

@@ -4,24 +4,24 @@
       "text": "学习笔记",
       "items": [
         {
-          "text": "GIT",
+          "text": "git",
           "collapsed": true,
           "items": [
             {
               "text": "git-config",
-              "link": "/repository/StudyNotes/GIT/git-config"
+              "link": "/repository/StudyNotes/git/git-config"
             },
             {
               "text": "git-commit-standard",
-              "link": "/repository/StudyNotes/GIT/git-commit-standard"
+              "link": "/repository/StudyNotes/git/git-commit-standard"
             },
             {
               "text": "git-cherry-pick",
-              "link": "/repository/StudyNotes/GIT/git-cherry-pick"
+              "link": "/repository/StudyNotes/git/git-cherry-pick"
             },
             {
               "text": "配置alias别名指令",
-              "link": "/repository/StudyNotes/GIT/配置alias别名指令"
+              "link": "/repository/StudyNotes/git/配置alias别名指令"
             }
           ]
         },
@@ -467,8 +467,28 @@
       "text": "React",
       "items": [
         {
-          "text": "React组件的生命周期及使用场景",
-          "link": "/repository/React/React组件的生命周期及使用场景"
+          "text": "React UI的构建",
+          "link": "/repository/React/React UI的构建"
+        },
+        {
+          "text": "React类组件生命周期及使用场景",
+          "link": "/repository/React/React类组件生命周期及使用场景"
+        },
+        {
+          "text": "函数组件模拟生命周期",
+          "link": "/repository/React/函数组件模拟生命周期"
+        },
+        {
+          "text": "虚拟DOM和DOM diff",
+          "link": "/repository/React/虚拟DOM和DOM diff"
+        },
+        {
+          "text": "Virtual DOM及key属性的作用",
+          "link": "/repository/React/Virtual DOM及key属性的作用"
+        },
+        {
+          "text": "React如何实现组件间通信",
+          "link": "/repository/React/React如何实现组件间通信"
         }
       ]
     }
