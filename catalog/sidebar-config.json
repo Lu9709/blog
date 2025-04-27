@@ -487,6 +487,10 @@
           "link": "/repository/React/Virtual DOM及key属性的作用"
         },
         {
+          "text": "React Hooks",
+          "link": "/repository/React/React Hooks"
+        },
+        {
           "text": "React如何实现组件间通信",
           "link": "/repository/React/React如何实现组件间通信"
         }

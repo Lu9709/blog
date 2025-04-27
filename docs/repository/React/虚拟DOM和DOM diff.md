@@ -1,10 +1,11 @@
 # 虚拟DOM和DOM diff
 ### 虚拟DOM的原理是什么？
 #### 是什么
-虚拟DOM就是虚拟节点。React用JS对象来**模拟**DOM节点，然后将其渲染成真实的DOM节点。
+
+虚拟DOM就是**虚拟节点**。React用JS对象来**模拟**DOM节点，然后将其**渲染**成**真实的DOM节点**。
 
 #### 怎么做
-**第一步是模拟**，用JSX语法写出来的div其实是一个虚拟节点：
+**第一步是模拟**，用JSX语法写出来的 `div` 其实是一个虚拟节点：
 
 ```html
 <div id="x">
@@ -34,7 +35,7 @@
 }
 ```
 
-能够做到这一点是因为JSX语法会被转译为`createElement`函数调用（也叫h函数），如下：
+能够做到这一点是因为JSX语法会被转译为 `createElement` 函数调用（也叫h函数），如下：
 
 ```jsx
 React.createElement("div", { id: "x" },
@@ -92,12 +93,12 @@ function render(vdom) {
 
 ### React DOM diff算法是怎么样的？
 #### 是什么
-DOM diff就是对比两棵虚拟DOM树的算法。当组件变化时，会render出一个新的虚拟DOM，diff算法对比新旧虚拟DOM之后，得到一个patch，然后React用patch来更新真实DOM。
+**DOM diff**就是**对比两棵虚拟DOM树的算法**。当组件变化时，会render出一个新的虚拟DOM，diff算法对比新旧虚拟DOM之后，得到一个 `patch`，然后React用 `patch` 来更新真实DOM。
 
 #### 怎么做
 首先，对比两棵树的**根节点**
 
-1. 如果根节点的类型改变，比如`div`变成`p`，那么直接认为整棵树都变了，不再对比子节点。此时直接删除对应的真实的DOM树，创建新的真实的DOM树
+1. 如果根节点的类型改变，比如 `div` 变成 `p`，那么直接认为整棵树都变了，不再对比子节点。此时直接删除对应的真实的DOM树，创建新的真实的DOM树
 2. 如果根节点的类型没变，就看看属性变了没有
     - 如果没变，就保留对应的真实节点
     - 如果变了，就只更新该节点的属性，不重新创建节点
@@ -180,7 +181,7 @@ React先对比key发现key只增加了一个，于是保留b和c，新建a。
 2. React需要维护三个变量，Vue则需要维护四个变量。
 3. Vue整体效率比React更高，举例说明：假设有N个子节点，我们只是把最后子节点移到第一个，那么:
      * React需要进行借助Map进行key搜索找到匹配项，然后复用节点
-     * Vue会发现移动，直接服用节点
+     * Vue会发现移动，直接复用节点
 
 ### 参考文章
 >[Virtual DOM | Marvin](https://canyuegongzi.github.io/web/vue/2.html)
