@@ -224,8 +224,8 @@
               "link": "/repository/StudyNotes/JS/async和await"
             },
             {
-              "text": "typeof_与_instanceof",
-              "link": "/repository/StudyNotes/JS/typeof_与_instanceof"
+              "text": "typeof与instanceof",
+              "link": "/repository/StudyNotes/JS/typeof与instanceof"
             },
             {
               "text": "JSON",
@@ -493,6 +493,193 @@
         {
           "text": "React如何实现组件间通信",
           "link": "/repository/React/React如何实现组件间通信"
+        }
+      ]
+    }
+  ],
+  "/repository/面试题/": [
+    {
+      "text": "面试题",
+      "items": [
+        {
+          "text": "HTML",
+          "link": "/repository/面试题/HTML"
+        },
+        {
+          "text": "CSS",
+          "link": "/repository/面试题/CSS"
+        },
+        {
+          "text": "JS",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "JS基本数据类型",
+              "link": "/repository/面试题/JS/JS基本数据类型"
+            },
+            {
+              "text": "8个falsy值",
+              "link": "/repository/面试题/JS/8个falsy值"
+            },
+            {
+              "text": "原型链",
+              "link": "/repository/面试题/JS/原型链"
+            },
+            {
+              "text": "关于this",
+              "link": "/repository/面试题/JS/关于this"
+            },
+            {
+              "text": "JS的new做了什么",
+              "link": "/repository/面试题/JS/JS的new做了什么"
+            },
+            {
+              "text": "JS的立即执行函数是什么",
+              "link": "/repository/面试题/JS/JS的立即执行函数是什么"
+            },
+            {
+              "text": "JS的闭包是什么，怎么用",
+              "link": "/repository/面试题/JS/JS的闭包是什么，怎么用"
+            },
+            {
+              "text": "手写节流防抖",
+              "link": "/repository/面试题/JS/手写节流防抖"
+            },
+            {
+              "text": "JS如何实现类",
+              "link": "/repository/面试题/JS/JS如何实现类"
+            },
+            {
+              "text": "JS如何实现继承",
+              "link": "/repository/面试题/JS/JS如何实现继承"
+            },
+            {
+              "text": "手写AJAX",
+              "link": "/repository/面试题/JS/手写AJAX"
+            },
+            {
+              "text": "Promise",
+              "link": "/repository/面试题/JS/Promise"
+            },
+            {
+              "text": "async和await",
+              "link": "/repository/面试题/JS/async和await"
+            },
+            {
+              "text": "手写发布订阅",
+              "link": "/repository/面试题/JS/手写发布订阅"
+            },
+            {
+              "text": "手写深拷贝",
+              "link": "/repository/面试题/JS/手写深拷贝"
+            },
+            {
+              "text": "数组去重",
+              "link": "/repository/面试题/JS/数组去重"
+            },
+            {
+              "text": "输入url后页面渲染流程",
+              "link": "/repository/面试题/JS/输入url后页面渲染流程"
+            }
+          ]
+        },
+        {
+          "text": "TypeScript",
+          "link": "/repository/面试题/TypeScript"
+        },
+        {
+          "text": "Vue",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Vue2",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Vue2是如何实现双向绑定的",
+                  "link": "/repository/面试题/Vue/Vue2/Vue2是如何实现双向绑定的"
+                },
+                {
+                  "text": "Vue2的声明周期有哪些，数据请求放在哪个钩子",
+                  "link": "/repository/面试题/Vue/Vue2/Vue2的声明周期有哪些，数据请求放在哪个钩子"
+                },
+                {
+                  "text": "Vue2组件通信方式",
+                  "link": "/repository/面试题/Vue/Vue2/Vue2组件通信方式"
+                },
+                {
+                  "text": "Vuex用过么，怎么理解",
+                  "link": "/repository/面试题/Vue/Vue2/Vuex用过么，怎么理解"
+                },
+                {
+                  "text": "VueRouter用过么，怎么理解",
+                  "link": "/repository/面试题/Vue/Vue2/VueRouter用过么，怎么理解"
+                }
+              ]
+            },
+            {
+              "text": "Vue2 v.s Vue3",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Vue3对比Vue2做了哪些改动",
+                  "link": "/repository/面试题/Vue/Vue2v.sVue3/Vue3对比Vue2做了哪些改动"
+                },
+                {
+                  "text": "Object.defineProperty和Proxy的区别",
+                  "link": "/repository/面试题/Vue/Vue2v.sVue3/Object.defineProperty和Proxy的区别"
+                }
+              ]
+            },
+            {
+              "text": "Vue3",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Vue3为什么使用Composition API",
+                  "link": "/repository/面试题/Vue/Vue3/Vue3为什么使用CompositionAPI"
+                },
+                {
+                  "text": "Vue3为什么使用Proxy",
+                  "link": "/repository/面试题/Vue/Vue3/Vue3为什么使用Proxy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "React",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "虚拟DOM和DOM_diff",
+              "link": "/repository/面试题/React/虚拟DOM和DOM_diff"
+            },
+            {
+              "text": "如何理解Redux",
+              "link": "/repository/面试题/React/如何理解Redux"
+            },
+            {
+              "text": "什么是高阶组件",
+              "link": "/repository/面试题/React/什么是高阶组件"
+            },
+            {
+              "text": "React有哪些生命周期钩子函数_数据请求放在哪个钩子里_",
+              "link": "/repository/面试题/React/React有哪些生命周期钩子函数_数据请求放在哪个钩子里_"
+            },
+            {
+              "text": "React体系学习路线",
+              "link": "/repository/面试题/React/React体系学习路线"
+            },
+            {
+              "text": "React_如何实现组件间通信",
+              "link": "/repository/面试题/React/React_如何实现组件间通信"
+            },
+            {
+              "text": "React_Hooks实现生命周期",
+              "link": "/repository/面试题/React/React_Hooks实现生命周期"
+            }
+          ]
         }
       ]
     }
