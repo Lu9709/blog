@@ -61,8 +61,7 @@ export default defineConfig({
       { text: '学习笔记', link: '/repository/StudyNotes/git/git-config' }
     ],
     // 使用从 catalog 目录读取的侧边栏配置
-    sidebar: sidebarConfig,
-
+    sidebar: sidebarConfig, 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Lu9709' }
     ],
@@ -92,5 +91,31 @@ export default defineConfig({
       // 默认禁用；设置为 true 可为所有图片启用懒加载。
       lazyLoading: true
     }
+  },
+  vite: {
+    // 添加构建优化配置
+    build: {
+      // 启用 chunk 分割
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          // 将大模块拆分成更小的块
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('vue')) {
+                  return 'vue-vendor';
+              }
+              if (id.includes('vitepress') || id.includes('@vueuse')) {
+                  return 'vitepress-vendor';
+              }
+              return id.toString().split('node_modules/')[1].split('/')[0].toString();
+            }
+            if (id.includes('sidebar-config')) {
+              return 'sidebar-config'
+            }
+          }
+        }
+      }
+    }   
   }
 })
