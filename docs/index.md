@@ -29,5 +29,8 @@ features:
     link: /repository/React/React UI的构建
   - title: 面试题
     link: /repository/面试题/HTML
+  - title: 山竹记账
+    details: 前后端开发
+    link: /repository/山竹记账/开发环境
 ---
 
