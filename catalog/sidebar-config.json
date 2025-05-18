@@ -1,39 +1,4 @@
-{
-  "/repository/React/": [
-    {
-      "text": "React",
-      "items": [
-        {
-          "text": "React UI的构建",
-          "link": "/repository/React/React UI的构建"
-        },
-        {
-          "text": "React类组件生命周期及使用场景",
-          "link": "/repository/React/React类组件生命周期及使用场景"
-        },
-        {
-          "text": "函数组件模拟生命周期",
-          "link": "/repository/React/函数组件模拟生命周期"
-        },
-        {
-          "text": "虚拟DOM和DOM diff",
-          "link": "/repository/React/虚拟DOM和DOM diff"
-        },
-        {
-          "text": "Virtual DOM及key属性的作用",
-          "link": "/repository/React/Virtual DOM及key属性的作用"
-        },
-        {
-          "text": "React Hooks",
-          "link": "/repository/React/React Hooks"
-        },
-        {
-          "text": "React如何实现组件间通信",
-          "link": "/repository/React/React如何实现组件间通信"
-        }
-      ]
-    }
-  ],
+{ 
   "/repository/StudyNotes/": [
     {
       "text": "学习笔记",
@@ -458,6 +423,160 @@
       ]
     }
   ],
+  "/repository/Vue/": [
+    {
+      "text": "Vue",
+      "items": [
+        {
+          "text": "Vue起手式",
+          "link": "/repository/Vue/Vue起手式"
+        },
+        {
+          "text": "Vue构造选项",
+          "link": "/repository/Vue/Vue构造选项"
+        },
+        {
+          "text": "深入响应式原理",
+          "link": "/repository/Vue/深入响应式原理"
+        },
+        {
+          "text": "computed和watch",
+          "link": "/repository/Vue/computed和watch"
+        },
+        {
+          "text": "Filter",
+          "link": "/repository/Vue/Filter"
+        },
+        {
+          "text": "Vue模板",
+          "link": "/repository/Vue/Vue模板"
+        },
+        {
+          "text": "Directive指令",
+          "link": "/repository/Vue/Directive指令"
+        },
+        {
+          "text": "Mixin和Extends",
+          "link": "/repository/Vue/Mixin和Extends"
+        },
+        {
+          "text": "Provide和inject",
+          "link": "/repository/Vue/Provide和inject"
+        },
+        {
+          "text": ".sync_修饰符",
+          "link": "/repository/Vue/.sync_修饰符"
+        },
+        {
+          "text": "v-model",
+          "link": "/repository/Vue/v-model"
+        },
+        {
+          "text": "Vue Router",
+          "link": "/repository/Vue/Vue_Router"
+        },
+        {
+          "text": "路由守卫",
+          "link": "/repository/Vue/路由守卫"
+        },
+        {
+          "text": "VueX",
+          "link": "/repository/Vue/VueX"
+        },
+        {
+          "text": "Vue-i18n",
+          "link": "/repository/Vue/Vue-i18n"
+        },
+        {
+          "text": "嵌套多选框",
+          "link": "/repository/Vue/嵌套多选框"
+        },
+        {
+          "text": "阻止element组件中的_el-input__的粘贴功能",
+          "link": "/repository/Vue/阻止element组件中的_el-input__的粘贴功能"
+        },
+        {
+          "text": "element_UI_表单验证",
+          "link": "/repository/Vue/element_UI_表单验证"
+        },
+        {
+          "text": "element_ui__el-table_流体高度自适应",
+          "link": "/repository/Vue/element_ui__el-table_流体高度自适应"
+        },
+        {
+          "text": "vue_文件流下载excel文件",
+          "link": "/repository/Vue/vue_文件流下载excel文件"
+        },
+        {
+          "text": "a标签url下载文件",
+          "link": "/repository/Vue/a标签url下载文件"
+        },
+        {
+          "text": "使用js-file-download下载文件流文件",
+          "link": "/repository/Vue/使用js-file-download下载文件流文件"
+        },
+        {
+          "text": "el-image-viewer",
+          "link": "/repository/Vue/el-image-viewer"
+        },
+        {
+          "text": "富文本vue-quill-editor",
+          "link": "/repository/Vue/富文本vue-quill-editor"
+        },
+        {
+          "text": "Vuex持久化存储之vuex-persist",
+          "link": "/repository/Vue/Vuex持久化存储之vuex-persist"
+        },
+        {
+          "text": "Vue3中ref、toRef、toRefs的区别",
+          "link": "/repository/Vue/Vue3中ref、toRef、toRefs的区别"
+        },
+        {
+          "text": "内容溢出打点组件",
+          "link": "/repository/Vue/内容溢出打点组件"
+        },
+        {
+          "text": "vue_如何实现粘贴复制功能",
+          "link": "/repository/Vue/vue_如何实现粘贴复制功能"
+        }
+      ]
+    }
+  ],
+  "/repository/React/": [
+    {
+      "text": "React",
+      "items": [
+        {
+          "text": "React UI的构建",
+          "link": "/repository/React/React UI的构建"
+        },
+        {
+          "text": "React类组件生命周期及使用场景",
+          "link": "/repository/React/React类组件生命周期及使用场景"
+        },
+        {
+          "text": "函数组件模拟生命周期",
+          "link": "/repository/React/函数组件模拟生命周期"
+        },
+        {
+          "text": "虚拟DOM和DOM diff",
+          "link": "/repository/React/虚拟DOM和DOM diff"
+        },
+        {
+          "text": "Virtual DOM及key属性的作用",
+          "link": "/repository/React/Virtual DOM及key属性的作用"
+        },
+        {
+          "text": "React Hooks",
+          "link": "/repository/React/React Hooks"
+        },
+        {
+          "text": "React如何实现组件间通信",
+          "link": "/repository/React/React如何实现组件间通信"
+        }
+      ]
+    }
+  ],
   "/repository/你不知道的JavaScript/": [
     {
       "text": "你不知道的JavaScript",
@@ -491,6 +610,257 @@
             {
               "text": "关于this",
               "link": "/repository/你不知道的JavaScript/this和对象原型/关于this"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "/repository/山竹记账/": [
+    {
+      "text": "山竹记账",
+      "items": [
+        {
+          "text": "开发环境",
+          "link": "/repository/山竹记账/开发环境"
+        },
+        {
+          "text": "文档撰写和排期",
+          "link": "/repository/山竹记账/文档撰写和排期"
+        },
+        {
+          "text": "前端",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "搭建前端项目",
+              "link": "/repository/山竹记账/前端/搭建前端项目"
+            },
+            {
+              "text": "页面划分与布局",
+              "link": "/repository/山竹记账/前端/页面划分与布局"
+            },
+            {
+              "text": "组件封装与插槽",
+              "link": "/repository/山竹记账/前端/组件封装与插槽"
+            },
+            {
+              "text": "动画、SVG Sprite与滑动手势",
+              "link": "/repository/山竹记账/前端/动画、SVG_Sprite与滑动手势"
+            },
+            {
+              "text": "滑动重构",
+              "link": "/repository/山竹记账/前端/滑动重构"
+            },
+            {
+              "text": "业务与轮子的关系",
+              "link": "/repository/山竹记账/前端/业务与轮子的关系"
+            },
+            {
+              "text": "NavBar与Overlay组件",
+              "link": "/repository/山竹记账/前端/NavBar与Overlay组件"
+            },
+            {
+              "text": "使用v-model实现Tabs组件",
+              "link": "/repository/山竹记账/前端/使用v-model实现Tabs组件"
+            },
+            {
+              "text": "使用Vant UI制作数字按键",
+              "link": "/repository/山竹记账/前端/使用Vant_UI制作数字按键"
+            },
+            {
+              "text": "自定义表单组件",
+              "link": "/repository/山竹记账/前端/自定义表单组件"
+            },
+            {
+              "text": "表单验证",
+              "link": "/repository/山竹记账/前端/表单验证"
+            },
+            {
+              "text": "制作TagEdit和ItemList页面",
+              "link": "/repository/山竹记账/前端/制作TagEdit和ItemList页面"
+            },
+            {
+              "text": "封装弹出菜单、制作登陆页面",
+              "link": "/repository/山竹记账/前端/封装弹出菜单、制作登陆页面"
+            },
+            {
+              "text": "制作echarts图表",
+              "link": "/repository/山竹记账/前端/制作echarts图表"
+            }
+          ]
+        },
+        {
+          "text": "后端",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "部署应用和文档",
+              "link": "/repository/山竹记账/后端/部署应用和文档"
+            },
+            {
+              "text": "创建后端项目",
+              "link": "/repository/山竹记账/后端/创建后端项目"
+            },
+            {
+              "text": "RESTful API",
+              "link": "/repository/山竹记账/后端/RESTful_API"
+            },
+            {
+              "text": "后端单元测试",
+              "link": "/repository/山竹记账/后端/后端单元测试"
+            },
+            {
+              "text": "网站部署",
+              "link": "/repository/山竹记账/后端/网站部署"
+            },
+            {
+              "text": "Rails密钥管理",
+              "link": "/repository/山竹记账/后端/Rails密钥管理"
+            },
+            {
+              "text": "使用Rail Mailer和QQ邮箱",
+              "link": "/repository/山竹记账/后端/使用Rail_Mailer和QQ邮箱"
+            },
+            {
+              "text": "测试驱动开发与API文档",
+              "link": "/repository/山竹记账/后端/测试驱动开发与API文档"
+            },
+            {
+              "text": "mock、order、enum",
+              "link": "/repository/山竹记账/后端/mock、order、enum"
+            },
+            {
+              "text": "JWT",
+              "link": "/repository/山竹记账/后端/JWT"
+            },
+            {
+              "text": "中间件与鉴权",
+              "link": "/repository/山竹记账/后端/中间件与鉴权"
+            },
+            {
+              "text": "JWT续期与Refresh Token",
+              "link": "/repository/山竹记账/后端/JWT续期与Refresh_Token"
+            },
+            {
+              "text": "快速实现后端接口",
+              "link": "/repository/山竹记账/后端/快速实现后端接口"
+            },
+            {
+              "text": "migration、自定义校验、ISO8601",
+              "link": "/repository/山竹记账/后端/migration、自定义校验、ISO8601"
+            },
+            {
+              "text": "统计数据分组",
+              "link": "/repository/山竹记账/后端/统计数据分组"
+            }
+          ]
+        },
+        {
+          "text": "前后端联调",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "第一次前后端联调接口",
+              "link": "/repository/山竹记账/前后端联调/第一次前后端联调接口"
+            },
+            {
+              "text": "Axios封装",
+              "link": "/repository/山竹记账/前后端联调/Axios封装"
+            },
+            {
+              "text": "前后端再联调",
+              "link": "/repository/山竹记账/前后端联调/前后端再联调"
+            },
+            {
+              "text": "用户鉴权与路由守卫",
+              "link": "/repository/山竹记账/前后端联调/用户鉴权与路由守卫"
+            },
+            {
+              "text": "自制纯前端Mock系统",
+              "link": "/repository/山竹记账/前后端联调/自制纯前端Mock系统"
+            },
+            {
+              "text": "用Hooks封装业务逻辑",
+              "link": "/repository/山竹记账/前后端联调/用_Hooks_封装业务逻辑"
+            },
+            {
+              "text": "Ref与Reactive",
+              "link": "/repository/山竹记账/前后端联调/Ref_与_Reactive"
+            },
+            {
+              "text": "Axios实践之标签请求",
+              "link": "/repository/山竹记账/前后端联调/Axios实践之标签请求"
+            }
+          ]
+        },
+        {
+          "text": "React",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "React项目搭建",
+              "link": "/repository/山竹记账/React/React项目搭建"
+            },
+            {
+              "text": "React Router 6",
+              "link": "/repository/山竹记账/React/React_Router_6"
+            },
+            {
+              "text": "Css in Js 的三种方法",
+              "link": "/repository/山竹记账/React/Css_in_Js_的三种方法"
+            },
+            {
+              "text": "创建欢迎页面",
+              "link": "/repository/山竹记账/React/创建欢迎页面"
+            },
+            {
+              "text": "创建useSwipe的Hooks",
+              "link": "/repository/山竹记账/React/创建useSwipe的Hooks"
+            },
+            {
+              "text": "引入Zustand.js",
+              "link": "/repository/山竹记账/React/引入Zustand.js"
+            },
+            {
+              "text": "数据请求与缓存失效之 SWR",
+              "link": "/repository/山竹记账/React/数据请求与缓存失效之_SWR"
+            },
+            {
+              "text": "搭建Mock、封装Axios、使用SWR",
+              "link": "/repository/山竹记账/React/搭建_Mock、封装_Axios、使用_SWR"
+            },
+            {
+              "text": "封装loading和AddButton",
+              "link": "/repository/山竹记账/React/封装loading和AddButton"
+            },
+            {
+              "text": "用Grid布局制作列表页",
+              "link": "/repository/山竹记账/React/用Grid布局制作列表页"
+            },
+            {
+              "text": "两种组件间的通信方式",
+              "link": "/repository/山竹记账/React/两种组件间的通信方式"
+            },
+            {
+              "text": "滑动菜单",
+              "link": "/repository/山竹记账/React/滑动菜单"
+            },
+            {
+              "text": "无限加载列表",
+              "link": "/repository/山竹记账/React/无限加载列表"
+            },
+            {
+              "text": "登录页面-表单与数据校验",
+              "link": "/repository/山竹记账/React/登录页面_表单与数据校验"
+            },
+            {
+              "text": "修复手机上的bug",
+              "link": "/repository/山竹记账/React/修复手机上的bug"
+            },
+            {
+              "text": "Grid + Flex布局实战",
+              "link": "/repository/山竹记账/React/Grid_+_Flex布局实战"
             }
           ]
         }
@@ -678,257 +1048,6 @@
             {
               "text": "React_Hooks实现生命周期",
               "link": "/repository/面试题/React/React_Hooks实现生命周期"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "/repository/山竹记账/": [
-    {
-      "text": "山竹记账",
-      "items": [
-        {
-          "text": "开发环境",
-          "link": "/repository/山竹记账/开发环境"
-        },
-        {
-          "text": "文档撰写和排期",
-          "link": "/repository/山竹记账/文档撰写和排期"
-        },
-        {
-          "text": "前端",
-          "collapsed": true,
-          "items": [
-            {
-              "text": "搭建前端项目",
-              "link": "/repository/山竹记账/前端/搭建前端项目"
-            },
-            {
-              "text": "页面划分与布局",
-              "link": "/repository/山竹记账/前端/页面划分与布局"
-            },
-            {
-              "text": "组件封装与插槽",
-              "link": "/repository/山竹记账/前端/组件封装与插槽"
-            },
-            {
-              "text": "动画、SVG Sprite与滑动手势",
-              "link": "/repository/山竹记账/前端/动画、SVG_Sprite与滑动手势"
-            },
-            {
-              "text": "滑动重构",
-              "link": "/repository/山竹记账/前端/滑动重构"
-            },
-            {
-              "text": "业务与轮子的关系",
-              "link": "/repository/山竹记账/前端/业务与轮子的关系"
-            },
-            {
-              "text": "NavBar与Overlay组件",
-              "link": "/repository/山竹记账/前端/NavBar与Overlay组件"
-            },
-            {
-              "text": "使用v-model实现Tabs组件",
-              "link": "/repository/山竹记账/前端/使用v-model实现Tabs组件"
-            },
-            {
-              "text": "使用Vant UI制作数字按键",
-              "link": "/repository/山竹记账/前端/使用Vant_UI制作数字按键"
-            },
-            {
-              "text": "自定义表单组件",
-              "link": "/repository/山竹记账/前端/自定义表单组件"
-            },
-            {
-              "text": "表单验证",
-              "link": "/repository/山竹记账/前端/表单验证"
-            },
-            {
-              "text": "制作TagEdit和ItemList页面",
-              "link": "/repository/山竹记账/前端/制作TagEdit和ItemList页面"
-            },
-            {
-              "text": "封装弹出菜单、制作登陆页面",
-              "link": "/repository/山竹记账/前端/封装弹出菜单、制作登陆页面"
-            },
-            {
-              "text": "制作echarts图表",
-              "link": "/repository/山竹记账/前端/制作echarts图表"
-            } 
-          ]
-        },
-        {
-          "text": "后端",
-          "collapsed": true,
-          "items": [
-            {
-              "text": "部署应用和文档",
-              "link": "/repository/山竹记账/后端/部署应用和文档"
-            },
-            {
-              "text": "创建后端项目",
-              "link": "/repository/山竹记账/后端/创建后端项目"
-            },
-            {
-              "text": "RESTful API",
-              "link": "/repository/山竹记账/后端/RESTful_API"
-            },
-            {
-              "text": "后端单元测试",
-              "link": "/repository/山竹记账/后端/后端单元测试"
-            },
-            {
-              "text": "网站部署",
-              "link": "/repository/山竹记账/后端/网站部署"
-            },
-            {
-              "text": "Rails密钥管理",
-              "link": "/repository/山竹记账/后端/Rails密钥管理"
-            },
-            {
-              "text": "使用Rail Mailer和QQ邮箱",
-              "link": "/repository/山竹记账/后端/使用Rail_Mailer和QQ邮箱"
-            },
-            {
-              "text": "测试驱动开发与API文档",
-              "link": "/repository/山竹记账/后端/测试驱动开发与API文档"
-            },
-            {
-              "text": "mock、order、enum",
-              "link": "/repository/山竹记账/后端/mock、order、enum"
-            },
-            {
-              "text": "JWT",
-              "link": "/repository/山竹记账/后端/JWT"
-            },
-            {
-              "text": "中间件与鉴权",
-              "link": "/repository/山竹记账/后端/中间件与鉴权"
-            },
-            {
-              "text": "JWT续期与Refresh Token",
-              "link": "/repository/山竹记账/后端/JWT续期与Refresh_Token"
-            },
-            {
-              "text": "快速实现后端接口",
-              "link": "/repository/山竹记账/后端/快速实现后端接口"
-            },
-            {
-              "text": "migration、自定义校验、ISO8601",
-              "link": "/repository/山竹记账/后端/migration、自定义校验、ISO8601"
-            },
-            {
-              "text": "统计数据分组",
-              "link": "/repository/山竹记账/后端/统计数据分组"
-            }
-          ]
-        },
-        {
-          "text": "前后端联调",
-          "collapsed": true,
-          "items": [
-            {
-              "text": "第一次前后端联调接口",
-              "link": "/repository/山竹记账/前后端联调/第一次前后端联调接口"
-            },
-            {
-              "text": "Axios封装",
-              "link": "/repository/山竹记账/前后端联调/Axios封装"
-            },
-            {
-              "text": "前后端再联调",
-              "link": "/repository/山竹记账/前后端联调/前后端再联调"
-            },
-            {
-              "text": "用户鉴权与路由守卫",
-              "link": "/repository/山竹记账/前后端联调/用户鉴权与路由守卫"
-            },
-            {
-              "text": "自制纯前端Mock系统",
-              "link": "/repository/山竹记账/前后端联调/自制纯前端Mock系统"
-            },
-            {
-              "text": "用Hooks封装业务逻辑",
-              "link": "/repository/山竹记账/前后端联调/用_Hooks_封装业务逻辑"
-            },
-            {
-              "text": "Ref与Reactive",
-              "link": "/repository/山竹记账/前后端联调/Ref_与_Reactive"
-            },
-            {
-              "text": "Axios实践之标签请求",
-              "link": "/repository/山竹记账/前后端联调/Axios实践之标签请求"
-            }
-          ]
-        },
-        {
-          "text": "React",
-          "collapsed": true,
-          "items": [
-            {
-              "text": "React项目搭建",
-              "link": "/repository/山竹记账/React/React项目搭建"
-            },
-            {
-              "text": "React Router 6",
-              "link": "/repository/山竹记账/React/React_Router_6"
-            },
-            {
-              "text": "Css in Js 的三种方法",
-              "link": "/repository/山竹记账/React/Css_in_Js_的三种方法"
-            },
-            {
-              "text": "创建欢迎页面",
-              "link": "/repository/山竹记账/React/创建欢迎页面"
-            },
-            {
-              "text": "创建useSwipe的Hooks",
-              "link": "/repository/山竹记账/React/创建useSwipe的Hooks"
-            },
-            {
-              "text": "引入Zustand.js",
-              "link": "/repository/山竹记账/React/引入Zustand.js"
-            },
-            {
-              "text": "数据请求与缓存失效之 SWR",
-              "link": "/repository/山竹记账/React/数据请求与缓存失效之_SWR"
-            },
-            {
-              "text": "搭建Mock、封装Axios、使用SWR",
-              "link": "/repository/山竹记账/React/搭建_Mock、封装_Axios、使用_SWR"
-            },
-            {
-              "text": "封装loading和AddButton",
-              "link": "/repository/山竹记账/React/封装loading和AddButton"
-            },
-            {
-              "text": "用Grid布局制作列表页",
-              "link": "/repository/山竹记账/React/用Grid布局制作列表页"
-            },
-            {
-              "text": "两种组件间的通信方式",
-              "link": "/repository/山竹记账/React/两种组件间的通信方式"
-            },
-            {
-              "text": "滑动菜单",
-              "link": "/repository/山竹记账/React/滑动菜单"
-            },
-            {
-              "text": "无限加载列表",
-              "link": "/repository/山竹记账/React/无限加载列表"
-            },
-            {
-              "text": "登录页面-表单与数据校验",
-              "link": "/repository/山竹记账/React/登录页面_表单与数据校验"
-            },
-            {
-              "text": "修复手机上的bug",
-              "link": "/repository/山竹记账/React/修复手机上的bug"
-            },
-            {
-              "text": "Grid + Flex布局实战",
-              "link": "/repository/山竹记账/React/Grid_+_Flex布局实战"
             }
           ]
         }
