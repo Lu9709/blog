@@ -1050,6 +1050,40 @@
               "link": "/repository/面试题/React/React_Hooks实现生命周期"
             }
           ]
+        },
+        {
+          "text": "工程化",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "常见loader和plugin有哪些？两者的区别是什么？",
+              "link": "/repository/面试题/工程化/常见loader和plugin有哪些，两者区别是什么"
+            },
+            {
+              "text": "webpack如何解决开发时的跨域问题？",
+              "link": "/repository/面试题/工程化/webpack如何解决开发时的跨域问题"
+            },
+            {
+              "text": "如何实现tree-shaking",
+              "link": "/repository/面试题/工程化/如何实现tree-shaking"
+            },
+            {
+              "text": "如何提高webpack构建速度",
+              "link": "/repository/面试题/工程化/如何提高webpack构建速度"
+            },
+            {
+              "text": "webpack与vite的区别是什么？",
+              "link": "/repository/面试题/工程化/webpack与vite的区别是什么"
+            },
+            {
+              "text": "webpack怎么配置多页应用",
+              "link": "/repository/面试题/工程化/webpack怎么配置多页应用"
+            },
+            {
+              "text": "swc、esbuild是什么？",
+              "link": "/repository/面试题/工程化/swc、esbuild是什么"
+            }
+          ]
         }
       ]
     }
