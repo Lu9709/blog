@@ -1,4 +1,39 @@
-{ 
+{
+  "/repository/React/": [
+    {
+      "text": "React",
+      "items": [
+        {
+          "text": "React UI的构建",
+          "link": "/repository/React/React UI的构建"
+        },
+        {
+          "text": "React类组件生命周期及使用场景",
+          "link": "/repository/React/React类组件生命周期及使用场景"
+        },
+        {
+          "text": "函数组件模拟生命周期",
+          "link": "/repository/React/函数组件模拟生命周期"
+        },
+        {
+          "text": "虚拟DOM和DOM diff",
+          "link": "/repository/React/虚拟DOM和DOM diff"
+        },
+        {
+          "text": "Virtual DOM及key属性的作用",
+          "link": "/repository/React/Virtual DOM及key属性的作用"
+        },
+        {
+          "text": "React Hooks",
+          "link": "/repository/React/React Hooks"
+        },
+        {
+          "text": "React如何实现组件间通信",
+          "link": "/repository/React/React如何实现组件间通信"
+        }
+      ]
+    }
+  ],
   "/repository/StudyNotes/": [
     {
       "text": "学习笔记",
@@ -542,41 +577,6 @@
       ]
     }
   ],
-  "/repository/React/": [
-    {
-      "text": "React",
-      "items": [
-        {
-          "text": "React UI的构建",
-          "link": "/repository/React/React UI的构建"
-        },
-        {
-          "text": "React类组件生命周期及使用场景",
-          "link": "/repository/React/React类组件生命周期及使用场景"
-        },
-        {
-          "text": "函数组件模拟生命周期",
-          "link": "/repository/React/函数组件模拟生命周期"
-        },
-        {
-          "text": "虚拟DOM和DOM diff",
-          "link": "/repository/React/虚拟DOM和DOM diff"
-        },
-        {
-          "text": "Virtual DOM及key属性的作用",
-          "link": "/repository/React/Virtual DOM及key属性的作用"
-        },
-        {
-          "text": "React Hooks",
-          "link": "/repository/React/React Hooks"
-        },
-        {
-          "text": "React如何实现组件间通信",
-          "link": "/repository/React/React如何实现组件间通信"
-        }
-      ]
-    }
-  ],
   "/repository/你不知道的JavaScript/": [
     {
       "text": "你不知道的JavaScript",
@@ -1052,6 +1052,40 @@
           ]
         },
         {
+          "text": "HTTP",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "GET和POST的区别有哪些",
+              "link": "/repository/面试题/HTTP/GET和POST的区别有哪些"
+            },
+            {
+              "text": "HTTP缓存有哪些方案",
+              "link": "/repository/面试题/HTTP/HTTP缓存有哪些方案"
+            },
+            {
+              "text": "HTTP和HTTPS的区别有哪些",
+              "link": "/repository/面试题/HTTP/HTTP和HTTPS的区别有哪些"
+            },
+            {
+              "text": "HTTP1.1和HTTP2的区别有哪些",
+              "link": "/repository/面试题/HTTP/HTTP1.1和HTTP2的区别有哪些"
+            },
+            {
+              "text": "TCP三次握手和四次挥手是什么",
+              "link": "/repository/面试题/HTTP/TCP三次握手和四次挥手是什么"
+            },
+            {
+              "text": "同源策略和跨域",
+              "link": "/repository/面试题/HTTP/同源策略和跨域"
+            },
+            {
+              "text": "Session、Cookie、LocalStorage、SessionStorage的区别",
+              "link": "/repository/面试题/HTTP/Session、Cookie、LocalStorage、SessionStorage的区别"
+            }
+          ]
+        },
+        {
           "text": "工程化",
           "collapsed": true,
           "items": [
@@ -1082,6 +1116,10 @@
             {
               "text": "swc、esbuild是什么？",
               "link": "/repository/面试题/工程化/swc、esbuild是什么"
+            },
+            {
+              "text": "微前端",
+              "link": "/repository/面试题/工程化/微前端"
             }
           ]
         }
