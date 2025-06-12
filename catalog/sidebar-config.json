@@ -323,6 +323,10 @@
             {
               "text": "TCP",
               "link": "/repository/StudyNotes/HTTP/TCP"
+            },
+            {
+              "text": "Websocket",
+              "link": "/repository/StudyNotes/HTTP/WebSocket"
             }
           ]
         },
@@ -1082,6 +1086,10 @@
             {
               "text": "Session、Cookie、LocalStorage、SessionStorage的区别",
               "link": "/repository/面试题/HTTP/Session、Cookie、LocalStorage、SessionStorage的区别"
+            },
+            {
+              "text": "WebSocket",
+              "link": "/repository/面试题/HTTP/WebSocket"
             }
           ]
         },
