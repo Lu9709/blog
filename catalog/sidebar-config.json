@@ -327,6 +327,10 @@
             {
               "text": "Websocket",
               "link": "/repository/StudyNotes/HTTP/WebSocket"
+            },
+            {
+              "text": "SSE",
+              "link": "/repository/StudyNotes/HTTP/SSE"
             }
           ]
         },
@@ -1090,6 +1094,10 @@
             {
               "text": "WebSocket",
               "link": "/repository/面试题/HTTP/WebSocket"
+            },
+            {
+              "text": "SSE",
+              "link": "/repository/面试题/HTTP/SSE"
             }
           ]
         },
