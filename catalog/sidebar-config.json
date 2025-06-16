@@ -1006,6 +1006,10 @@
                 {
                   "text": "Vue3为什么使用Proxy",
                   "link": "/repository/面试题/Vue/Vue3/Vue3为什么使用Proxy"
+                },
+                {
+                  "text": "Vue3中defineModel如何使用",
+                  "link": "/repository/面试题/Vue/Vue3/Vue3中defineModel如何使用"
                 }
               ]
             },
