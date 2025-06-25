@@ -8,6 +8,10 @@
           "link": "/repository/React/React UI的构建"
         },
         {
+          "text": "什么是JSX",
+          "link": "/repository/React/什么是JSX"
+        },
+        {
           "text": "React类组件生命周期及使用场景",
           "link": "/repository/React/React类组件生命周期及使用场景"
         },
@@ -30,6 +34,34 @@
         {
           "text": "React如何实现组件间通信",
           "link": "/repository/React/React如何实现组件间通信"
+        },
+        {
+          "text": "受控组件与非受控组件",
+          "link": "/repository/React/受控组件与非受控组件"
+        },
+        {
+          "text": "React异步组件",
+          "link": "/repository/React/React异步组件"
+        },
+        {
+          "text": "什么是PureComponents？",
+          "link": "/repository/React/什么是PureComponents"
+        },
+        {
+          "text": "React Fiber",
+          "link": "/repository/React/React Fiber"
+        },
+        {
+          "text": "什么是高阶组件",
+          "link": "/repository/React/什么是高阶组件"
+        },
+        {
+          "text": "React Router",
+          "link": "/repository/React/React Router"
+        },
+        {
+          "text": "Redux",
+          "link": "/repository/React/Redux"
         }
       ]
     }
@@ -1062,6 +1094,10 @@
               "link": "/repository/面试题/React/React_Hooks实现生命周期"
             }
           ]
+        },
+        {
+          "text": "Vue v.s React",
+          "link": "/repository/面试题/Vue v.s React"
         },
         {
           "text": "HTTP",
