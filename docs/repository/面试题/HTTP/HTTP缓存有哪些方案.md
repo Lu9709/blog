@@ -70,7 +70,7 @@
 
 | | 缓存（强缓存）| 内容协商（弱缓存）|
 | --- | --- | --- |
-| HTTP 1.1 | `Cache-Control:max-age=3600` <br> `ETag: ABC` | `If-None-Match: ABC` <br> 响应状态码：304或200 |
-| HTTP 1.0 | `Expires: Tue, 20 May 2025 13:14:00 GMT` <br> `Last-Modified: Tue, 20 May 2025 09:14:00 GMT` | `If-Modified-Since: Tue, 20 May 2025 09:14:00 GMT` <br> 响应状态码：304或200 |
+| HTTP 1.1 | `Cache-Control:max-age=3600` | `ETag: ABC` <br> `If-None-Match: ABC` <br> 响应状态码：304或200 |
+| HTTP 1.0 | `Expires: Tue, 20 May 2025 13:14:00 GMT` | `Last-Modified: Tue, 20 May 2025 09:14:00 GMT` <br> `If-Modified-Since: Tue, 20 May 2025 09:14:00 GMT` <br> 响应状态码：304或200 |
 
 还有 [Pragma](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Reference/Headers/Pragma)，MDN不推荐使用这个。

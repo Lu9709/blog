@@ -341,6 +341,10 @@
           "collapsed": true,
           "items": [
             {
+              "text": "RESTful API",
+              "link": "/repository/StudyNotes/HTTP/RESTfulAPI"
+            },
+            {
               "text": "HTTP",
               "link": "/repository/StudyNotes/HTTP/HTTP"
             },
@@ -403,18 +407,24 @@
           "collapsed": true,
           "items": [
             {
-              "text": "性能",
-              "collapsed": true,
-              "items": [
-                {
-                  "text": "Webpack",
-                  "link": "/repository/StudyNotes/构建/性能/Webpack"
-                },
-                {
-                  "text": "性能优化",
-                  "link": "/repository/StudyNotes/构建/性能/性能优化"
-                }
-              ]
+              "text": "Webpack",
+              "link": "/repository/StudyNotes/构建/Webpack"
+            },
+            {
+              "text": "Vite",
+              "link": "/repository/StudyNotes/构建/Vite"
+            },
+            {
+              "text": "monorepo架构",
+              "link": "/repository/StudyNotes/构建/monorepo架构"
+            },
+            {
+              "text": "性能优化",
+              "link": "/repository/StudyNotes/构建/性能优化"
+            },
+            {
+              "text": "首屏加载优化",
+              "link": "/repository/StudyNotes/构建/首屏加载优化"
             }
           ]
         },

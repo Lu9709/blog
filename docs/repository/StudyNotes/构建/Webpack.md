@@ -2,13 +2,13 @@
 
 创建一个目录，初始化`npm`，然后在本地安装`webpack`和`webpack-cli`
 
-```
+```bash
 npm init -y
 npm install webpack webpack-cli --save-dev
 ```
 若要调用本地目录下的`webpack`
 
-```
+```text
 ./node_modules/.bin/webpack --version
 // 或用npx webpack 自动查找 但不够稳定
 ```
@@ -27,7 +27,7 @@ npm install webpack webpack-cli --save-dev
 
 入口起点`(entry point)`指示 `webpack` 应该使用哪个模块，来作为构建其内部依赖图的开始。进入入口起点后，`webpack` 会找出有哪些模块和库是入口起点（直接和间接）依赖的。
 
-```
+```js
 const path = require('path');
 
 module.exports = {
@@ -54,7 +54,7 @@ module.exports = {
 
 但`index.html`不能缓存，如果首页缓存了就不会更新`css，js`等。
 
-```
+```js
 const path = require('path');
 
 module.exports = {
@@ -70,12 +70,12 @@ module.exports = {
 
 安装`html-webpack-plugin`插件
 
-```
+```bash
 npm install --save-dev html-webpack-plugin
 ```
 配置`webpack.config.js`
 
-```
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -91,7 +91,7 @@ module.exports = {
 ```
 `template`可以指定生成的`html`使用模板的`title`，在模板的`title`内修改为`<%= htmlWebpackPlugin.options.title %>`
 
-```
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -111,12 +111,12 @@ module.exports = {
 
 使用`css-loader`、`style-loader`，安装命令。
 
-```
+```bash
 npm install --save-dev css-loader style-loader
 ```
 配置`webpack.config.js`
 
-```
+```js
 module: {
   rules: [
     {
@@ -132,12 +132,12 @@ module: {
 
 安装命令如下：
 
-```
+```bash
 npm install --save-dev mini-css-extract-plugin
 ```
 配置`webpack.config.js`
 
-```
+```js
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   plugins: [
@@ -173,7 +173,7 @@ Function
 
 * 生产mode
 
-```
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -220,7 +220,7 @@ module.exports = {
 ```
 * 开发development
 
-```
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -253,7 +253,7 @@ module.exports = {
 ```
  并在`package`里修改。
 
-```
+```json
 {
   "name": "webpack",
   "version": "1.0.0",
@@ -267,7 +267,7 @@ module.exports = {
 ```
 或者把两个文件拆开来(继承的思想)创建一个`webpack.config.base.js`
 
-```
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -293,7 +293,7 @@ module.exports = {
 ```
 `webpack.config.js`
 
-```
+```js
 const base = require('./webpack.config.base')
 module.exports = {
   ...base,
@@ -310,7 +310,7 @@ module.exports = {
 ```
 `webpack.config.pro.js`
 
-```
+```js
 const base = require('./webpack.config.base')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
@@ -349,12 +349,12 @@ module.exports = {
 
 安装
 
-```
+```bash
 npm install sass-loader sass webpack --save-dev
 ```
 `webpack.config.base.js`
 
-```
+```js
 module: {
   rules: [
     {
@@ -378,12 +378,12 @@ module: {
 
 安装命令：
 
-```
+```bash
 npm install less less-loader --save-dev
 ```
 `webpack.config.base.js`内配置如下所示。
 
-```
+```js
 module: {
   rules: [
     {
@@ -411,12 +411,12 @@ module: {
 
 安装命令：
 
-```
+```bash
 npm install --save-dev stylus stylus-loader
 ```
 `webpack.config.base.js`
 
-```
+```js
 {
   test: /\.styl(us)?$/,
     loader:'style-loader!css-loader!stylus-loader'
@@ -426,11 +426,11 @@ npm install --save-dev stylus stylus-loader
 
 安装
 
-```
+```bash
 npm install file-loader --save-dev
 ```
 
-```
+```js
 {
   test: /\.(png|jpe?g|gif)$/i,
     use: [
@@ -442,7 +442,7 @@ npm install file-loader --save-dev
 ```
 `index.js`
 
-```
+```js
 import photo from "./assets/1.jpg" // photo的路径
 const div = document.createElement('test')
 div.innerHTML=`<img src="${photo}" alt="空">`
@@ -453,14 +453,14 @@ app.appendChild(div)
 
 `x.js`
 
-```
+```js
 export default function (){
   console.log("I am Lazy")
 }
 ```
 `index.js`
 
-```
+```js
 const app = document.querySelector('#app')
 const button = document.createElement('button')
 button.innerText = '懒加载'
@@ -477,12 +477,12 @@ button.onclick = () => {
 
 安装命令：
 
-```
+```bash
 npm install --save-dev webpack-dev-server
 ```
 配置`webpack.config.js`内添加
 
-```
+```js
 module.exports = {
   devServer: {
     contentBase: './dist',
@@ -491,7 +491,7 @@ module.exports = {
 ```
 在`package.json`内的`"scripts"`内添加快捷键
 
-```
+```js
 "start": "webpack-dev-server ",
 ```
 # 创建快捷键
@@ -500,7 +500,7 @@ module.exports = {
 
 下次使用直接`yarn build/npm run build`
 
-```
+```json
 {
   "name": "webpack",
   "version": "1.0.0",
@@ -521,7 +521,7 @@ module.exports = {
 * `test`用于标识应该被对应的`loader`进行转换成的某个或某些文件
 * `use` 进行转换时，使用那个`loader`
 
-**plugins****(****插件****)执行范围更广的任务，多样，功能大**
+**plugins(插件)执行范围更广的任务，多样，功能大**
 
 * 需要先`require()`它
 * 可以选项`(option)`自定义
