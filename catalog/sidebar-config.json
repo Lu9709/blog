@@ -4,6 +4,14 @@
       "text": "React",
       "items": [
         {
+          "text": "React 应用宏观包结构",
+          "link": "/repository/React/React应用宏观包结构"
+        },
+        {
+          "text": "React工作循环",
+          "link": "/repository/React/React工作循环"
+        },
+        {
           "text": "React UI的构建",
           "link": "/repository/React/React UI的构建"
         },
