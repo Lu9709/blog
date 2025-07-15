@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { MermaidPlugin, MermaidMarkdown } from 'vitepress-plugin-mermaid'
 
 import sidebarConfig from '../../catalog/sidebar-config.json'
 
@@ -90,6 +91,9 @@ export default defineConfig({
     image: {
       // 默认禁用；设置为 true 可为所有图片启用懒加载。
       lazyLoading: true
+    },
+    config: (md) => {
+      md.use(MermaidMarkdown)
     }
   },
   vite: {
@@ -116,6 +120,19 @@ export default defineConfig({
           }
         }
       }
-    }   
+    },
+    plugins: [
+      MermaidPlugin()
+    ],
+    optimizeDeps: {
+      include: [
+        'mermaid'
+      ]
+    },
+    ssr: {
+      noExternal: [
+        'mermaid'
+      ]
+    }
   }
 })
