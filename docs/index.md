@@ -30,6 +30,10 @@ features:
   - title: React
     details: 学习 React
     link: /repository/React/React UI的构建
+  - title: Web3D
+    details: 学习 Web3D
+    link: /repository/Web3D/计算机图形学概论
+
   - title: 山竹记账
     details: 前后端开发
     link: /repository/山竹记账/开发环境

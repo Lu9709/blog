@@ -670,6 +670,43 @@
               "link": "/repository/你不知道的JavaScript/this和对象原型/关于this"
             }
           ]
+        },
+        {
+          "text": "抽象语法树",
+          "link": "/repository/你不知道的JavaScript/抽象语法树"
+        }
+      ]
+    }
+  ],
+  "/repository/Web3D": [
+    {
+      "text": "Web3D",
+      "items": [
+        {
+          "text": "计算机图形学概论", 
+          "link": "/repository/Web3D/计算机图形学概论"
+        },
+        {
+          "text": "渲染管线",
+          "link": "/repository/Web3D/渲染管线"
+        },
+        {
+          "text": "Web GL",
+          "items": [
+            {
+              "text": "什么是WebGL",
+              "link": "/repository/Web3D/Web GL/什么是WebGL"
+            }
+          ]
+        },
+        {
+          "text": "Three",
+          "items": [
+            {
+              "text": "什么是Three",
+              "link": "/repository/Web3D/Three.js/什么是Three"
+            }
+          ]
         }
       ]
     }

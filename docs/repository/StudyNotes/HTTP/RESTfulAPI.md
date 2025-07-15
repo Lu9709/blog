@@ -73,5 +73,7 @@ HTTP 方法定义它对给定资源执行的**操作类型**。
 ### 参考资料
 
 > [GitHub 文档 - REST API 入门](https://docs.github.com/zh/rest/using-the-rest-api/getting-started-with-the-rest-api?apiVersion=2022-11-28)
+> 
 > [阮一峰的网络日志 - RESTful API 设计指南](https://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+> 
 > [阮一峰的网络日志 - 理解RESTful架构](https://www.ruanyifeng.com/blog/2011/09/restful.html)
