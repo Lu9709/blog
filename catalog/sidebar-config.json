@@ -640,6 +640,14 @@
       "text": "你不知道的JavaScript",
       "items": [
         {
+          "text": "JavaScript引擎",
+          "link": "/repository/你不知道的JavaScript/JavaScript引擎"
+        },
+        {
+          "text": "抽象语法树",
+          "link": "/repository/你不知道的JavaScript/抽象语法树"
+        },
+        {
           "text": "作用域和闭包",
           "collapsed": true,
           "items": [
@@ -670,10 +678,6 @@
               "link": "/repository/你不知道的JavaScript/this和对象原型/关于this"
             }
           ]
-        },
-        {
-          "text": "抽象语法树",
-          "link": "/repository/你不知道的JavaScript/抽象语法树"
         }
       ]
     }
