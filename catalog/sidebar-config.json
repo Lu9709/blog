@@ -715,6 +715,17 @@
       ]
     }
   ],
+  "/repository/LowCode": [
+    {
+      "text": "低代码",
+      "items": [
+        {
+          "text": "低代码JSON数据量太大如何解决",
+          "link": "repository/LowCode/"
+        }
+      ]
+    }
+  ],
   "/repository/山竹记账/": [
     {
       "text": "山竹记账",
