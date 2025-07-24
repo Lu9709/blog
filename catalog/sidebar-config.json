@@ -625,6 +625,14 @@
           "link": "/repository/Vue/Vue3中ref、toRef、toRefs的区别"
         },
         {
+          "text": "Vue3中ref、reactive的区别",
+          "link": "/repository/Vue/Vue3中ref、reactive的区别"
+        },
+        {
+          "text": "Vue3中Watch和WatchEffect的区别",
+          "link": "/repository/Vue/Vue3中Watch和WatchEffect的区别"
+        },
+        {
           "text": "内容溢出打点组件",
           "link": "/repository/Vue/内容溢出打点组件"
         },
