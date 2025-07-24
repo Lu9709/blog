@@ -1216,6 +1216,10 @@
             {
               "text": "SSE",
               "link": "/repository/面试题/HTTP/SSE"
+            },
+            {
+              "text": "XSS、CSRF",
+              "link": "/repository/面试题/HTTP/XSS、CSRF"
             }
           ]
         },
