@@ -989,6 +989,57 @@
       ]
     }
   ],
+  "/repository/微信小程序/": [
+    {
+      "text": "微信小程序",
+      "items": [
+        {
+          "text": "微信小程序起步",
+          "link": "/repository/微信小程序/微信小程序起步"
+        },
+        {
+          "text": "小程序配置",
+          "link": "/repository/微信小程序/小程序配置"
+        },
+        {
+          "text": "小程序框架",
+          "link": "/repository/微信小程序/小程序框架"
+        },
+        {
+          "text": "微信跳转场景",
+          "link": "/repository/微信小程序/微信跳转场景"
+        },
+        {
+          "text": "微信小程序消息订阅",
+          "link": "/repository/微信小程序/微信小程序消息订阅"
+        },
+        {
+          "text": "微信小程序分享转发-uni-app",
+          "link": "/repository/微信小程序/微信小程序分享转发-uni-app"
+        },
+        {
+          "text": "微信小程序之保存图片至相册",
+          "link": "/repository/微信小程序/微信小程序之保存图片至相册"
+        },
+        {
+          "text": "小程序登录获取信息uni-app",
+          "link": "/repository/微信小程序/小程序登录获取信息uni-app"
+        },
+        {
+          "text": "小程序扫码二维码进行跳转",
+          "link": "/repository/微信小程序/小程序扫码二维码进行跳转"
+        },
+        {
+          "text": "小程序mp-upload图片旋转处理",
+          "link": "/repository/微信小程序/小程序mp-upload图片旋转处理"
+        },
+        {
+          "text": "uni-app_自定义导航栏",
+          "link": "/repository/微信小程序/uni-app_自定义导航栏"
+        }
+      ]
+    }
+  ],
   "/repository/面试题/": [
     {
       "text": "面试题",

@@ -33,7 +33,9 @@ features:
   - title: Web3D
     details: 学习 Web3D
     link: /repository/Web3D/计算机图形学概论
-
+  - title: 微信小程序
+    link: /repository/微信小程序/微信小程序起步
+    details: 学习微信小程序
   - title: 山竹记账
     details: 前后端开发
     link: /repository/山竹记账/开发环境
