@@ -7,12 +7,14 @@
 
 * `open` shadow root 元素可以从 js 外部访问根节点
 
- element.shadowRoot; // 返回一个 ShadowRoot 对象
-
+  ```js
+  element.shadowRoot; // 返回一个 ShadowRoot 对象
+  ```
 * `closed` 拒绝从 js 外部访问关闭的 shadow root 节点
-
-element.shadowRoot; // null
-
+  
+  ```js
+  element.shadowRoot; // null
+  ```
 #### 代码案例
 
 ```html
@@ -42,4 +44,6 @@ element.shadowRoot; // null
 
 #### 参考链接
 
-<https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM><https://zh.javascript.info/shadow-dom>
+> [shadow dom - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)
+> 
+> [影子DOM（shadow DOM） - javascript.info](https://zh.javascript.info/shadow-dom)
