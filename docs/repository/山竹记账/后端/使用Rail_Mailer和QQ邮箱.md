@@ -48,11 +48,11 @@ config.action_mailer.perform_caching = false
 # 是否使用缓存  
 ```
 
-由于配置的是qq邮箱需要在设置中配置POP3服务，并生成一个授权码。在发送短信之后会得到授权码，然后将其存放在rails的密钥管理中，执行代码`<font style="color:rgb(64, 120, 242);">EDITOR=</font><font style="color:rgb(80, 161, 79);">"code --wait"</font> bin/rails credentials:edit`，然后在编辑内容中输入`email_password`的密码。
+由于配置的是qq邮箱需要在设置中配置POP3服务，并生成一个授权码。在发送短信之后会得到授权码，然后将其存放在rails的密钥管理中，执行代码`<span style="color:rgb(64, 120, 242);">EDITOR=</span><span style="color:rgb(80, 161, 79);">"code --wait"</span> bin/rails credentials:edit`，然后在编辑内容中输入`email_password`的密码。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661327917529-64ee7476-f8c4-47b1-864a-9d6eac7de834.png)
+![邮箱配置](attachments/邮箱配置.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661328597492-e7038ab9-fc26-421c-a25f-1c374fbc3e3a.png)
+![邮箱验证密钥配置](attachments/邮箱验证密钥配置.png)
 
 然后继续在`development.rb`中继续配置邮件服务器的内容，使用邮箱密码时使用`Rails.application.credentials.email_password`读取密钥。
 
@@ -74,7 +74,7 @@ config.action_mailer.smtp_settings = {
 
 可以通过测试来判断邮箱是否可以发送，在终端执行`bin/rails console`，进入rail的环境，执行`UserMailer.welcome_email.deliver`，之后可以在邮箱中看到发送成功了。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661329269910-b12a2f13-64db-42c6-a15a-1cbb8119689f.png)
+![邮箱验证-1](attachments/邮箱验证-1.png)
 
 接着因为还需要发送验证码，则需要在`user_mailer.rb`内配置，并在`welcome_email.html.erb`模版中使用传入的code值。
 
@@ -101,7 +101,7 @@ end
 
 接着可以进行验证，还是执行`bin/rails console`，进入rail环境，执行`UserMailer.welcome_email('222222').deliver`，邮箱中发送的邮件会带上输入的code。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661329840809-7c9aa872-7991-49b1-aa8b-a5fa6c0ec75b.png)
+![邮箱验证-2](attachments/邮箱验证-2.png)
 
 **补充内容：**
 
@@ -112,5 +112,5 @@ end
 
 前后端合作交流，具体如下所示。
 
-![画板](https://cdn.nlark.com/yuque/0/2022/jpeg/2749296/1661331997159-dd83746b-cfd6-46e1-8d8d-15dbf49ed770.jpeg)
+![画板](attachments/画板.jpeg)
 

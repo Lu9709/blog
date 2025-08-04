@@ -80,7 +80,7 @@ root.render(
 ```
 
 #### 嵌套路由
-即当前路由下的chlidern内在添加路由，若是要展示的字路由的内容需要使用到`[<Outlet/>](https://reactrouter.com/en/main/components/outlet)`，但是如果主容器不需要追加东西则不需要使用`<Outlet/>`，子路由也能添加默认路由。路由跳转顺序是按照路由数组顺序来的。如下代码所示嵌套路由中添加了`/welcome/1，2，3，4`。
+即当前路由下的 children 内在添加路由，若是要展示的字路由的内容需要使用到[`<Outlet/>`](https://reactrouter.com/en/main/components/outlet)，但是如果主容器不需要追加东西则不需要使用`<Outlet/>`，子路由也能添加默认路由。路由跳转顺序是按照路由数组顺序来的。如下代码所示嵌套路由中添加了`/welcome/1，2，3，4`。
 
 ```tsx
 import React from 'react'

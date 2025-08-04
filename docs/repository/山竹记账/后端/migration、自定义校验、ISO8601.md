@@ -13,7 +13,7 @@ end
 
 添加完成后执行`bin/rails db:migrate`，然后查看`/root/repos/mangosteen-1/db/schema.rb`中数据库中的items表接口发生了变化，添加了一列为kind，如下图所示。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1662315688874-45edbb85-3175-42ce-862b-01eb7d65b045.png)
+![item表结构修改](attachments/item表结构修改.png)
 
 ### 自定义校验
 然后在修改`app/models/item.rb`的内容，`kind`为一个枚举，表示收入和支出，之后还可以在添加。其中`validates`表示**标准校验**，`validate`表示**<font style="color:#E8323C;">自定义校验</font>**。其中`&`在ruby中可以用于求是否交集，举例`[1,2] & [1,2,3]`会返回交集的内容`[1,2]`，而`!=`和`==`的理解在ruby中又有不同，ruby中是进行了递归，判断值是否相等，和`java`或`JavaScript`中的理解不同。

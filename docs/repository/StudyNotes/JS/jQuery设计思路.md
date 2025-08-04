@@ -15,7 +15,7 @@ jQuery的基本设计思想和主要用法，就是"选择某个网页元素，�
 这个对象可以操作对应的元素。
 表达式可以为CSS选择器
 
-```
+```js
 $(document) //选择整个文档对象
 $('#name') //选择id为name的网页元素
 $('div.my')//选择class为my的div元素
@@ -24,7 +24,7 @@ $('input[name=first]') // 选择name属性等于first的input元素
 
 jQuery特有的表达式
 
-```
+```js
 $('a:first') //选择网页中第一个a元素
 $('ul>li') //选择ul里的li元素
 $('tr:odd') //选择表格的奇数行
@@ -34,7 +34,7 @@ $('div:animated') // 选择当前处于动画状态的div元素
 
 通过获取的结果集进行筛选，选择符合条件的结果
 
-```
+```js
 $('#xxx').find('.red') //查找#xxx里class为red的元素
 $('#xxx').parent() //获取#xxx的爸爸
 $('#xxx').children() //获取#xxx的儿子
@@ -48,7 +48,7 @@ $('.red').each(fn) //遍历并对每个元素执行fn
 
 原理：关键就在于对象里的方法有：`return this`。这就是说调用了方法之后把对象给返回了回来，这样可以继续调用这个对象了。
 
-```
+```js
 window.jQuery = function (selector){
   const elements = document.querySelectorAll(selector);
   return {
@@ -67,13 +67,13 @@ window.jQuery = function (selector){
 
 在选中网页中的元素后，可以对它进行一些操作，并且让所有操作可以连接在一起，以链条的形式写出来，如下所示。
 
-```
+```js
 $('div').find('ul').eq(2).html('helloworld').end()
 ```
 
 拆解开来如下所示:
 
-```
+```js
 $('div')
   .find('h1') //找到h1元素
   .eq(2) //找到其中第三个hl元素
@@ -84,7 +84,7 @@ $('div')
 
 只需要将新元素直接传入jQuery的构造函数就可以了。因为利用了函数的重载，可以接受不同的参数，可以鉴别是选择器还是标签。
 
-```
+```js
 $('<p>Hello</p>');
 $('<li class="new">new list item</li>');
 $('<div><span>1</span></div>').appendTo(document.body)
@@ -110,13 +110,13 @@ $('body').before(div或$div)
 
 * 直接移动该元素
 
-```
+```js
 $('div').insertAfter($('p'));//把div元素移动p元素后面
 ```
 
 * 移动其他元素,使目标元素达到想要的位置
 
-```
+```js
 $('p').after($('div'));//把p元素加到div元素前面
 ```
 
@@ -131,7 +131,7 @@ $('p').after($('div'));//把p元素加到div元素前面
 
 可以使用同一个函数，来完成取值和赋值达到修改元素。
 
-```
+```js
 $('div').text() //读写文本内容
 $('div').HTML() //读写HTML内容
 $('div').attr('title',?) //读写属性

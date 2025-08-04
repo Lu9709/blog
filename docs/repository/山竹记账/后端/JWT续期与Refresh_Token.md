@@ -104,8 +104,7 @@ end
     end
   end
 ```
-
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661912885428-b09f1a0f-0c5c-4807-9308-02ef40460465.png)
+![rspec](attachments/rspec.png)
 
 ### RefreshToken是什么
 **RefreshToken用于JWT的续期**，举例如果用户登录了服务器返回了一个JWT和RefreshToken，当用户的JWT**过期后**，可以用RefreshToken去请求一个关于refreshJWT的接口，返回一个**新的JWT**。若这个RefreshToken的有效时间为7天(只需要记录创建时间，不用去存取有效时间)，那这段时间可以用做**RefreshToken作为JWT续期的凭证**，如此反复指导RefreshToken失效，用户重新登录。
@@ -144,7 +143,7 @@ resource "会话" do
 end
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661913565519-bcc9f54f-8245-4a51-9d76-4172c23fe076.png)
+![会话API](attachments/会话API.png)
 
 ### 使用email和code登录
 数据库若查找不到该邮箱就直接给它创建好。

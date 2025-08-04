@@ -304,7 +304,7 @@ export const TagEdit = defineComponent({
         title: () => '编辑标签',
         icon: () => <BackIcon />,
         default: () => <>
-          <TagForm id={numberId}/>
+          <TagForm id={numberId} />
           <div class={s.actions}>
             <Button level='danger' class={s.removeTags} onClick={() => { }}>删除标签</Button>
             <Button level='danger' class={s.removeTagsAndItems} onClick={() => { }}>删除标签和记账</Button>

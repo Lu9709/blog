@@ -10,7 +10,7 @@ JWT(JSON、Web、Token)，token可以理解为加密字符串。 关于web上用
 
 <br/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661751068082-814a0ed8-ea65-4e0d-af77-dc875099e579.png)
+![cookie流程](attachments/cookie流程.png)
 
 
 **Session**一般基于cookie实现，如果服务器给客户端发送明文的内容，会被黑客篡改，冒充登录，如果使用用随机数，则不会。
@@ -19,16 +19,16 @@ JWT(JSON、Web、Token)，token可以理解为加密字符串。 关于web上用
 
 <br/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661751728943-e4c2f788-8dc6-4899-8595-81735aa0b96e.png)
+![session流程](attachments/session流程.png)
 
 ### JWT的定义
-JWT就是将header、payload、signature用点分隔符连接后发送给前端。具体的定义可以查看维基百科的[JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token)。JWT是做web认证的。
+JWT就是将`header`、`payload`、`signature`用**点分隔符**连接后发送给前端。具体的定义可以查看维基百科的[JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token)。JWT是做web认证的。
 
 JWT有三部分组成，分别是
 
 + header——标识用于生成签名的算法,`{ "alg","HS256","typ":"JWT" }`，用于标识加密格式和类型。
 + payload(body)——包含一组声明，可以存放JSON的内容。
-+ siginature(密文)——将私钥、header头和body加密。header和body需要用base64处理，防止出现奇怪的字符。
++ signature(密文)——将私钥、header头和body加密。header和body需要用base64处理，防止出现奇怪的字符。
 
 ```ruby
 HMAC_SHA256(
@@ -38,12 +38,12 @@ HMAC_SHA256(
 )
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661753635153-e33e08b4-35cc-4b8f-aae8-65f3252eaa85.png)
+![jwt三部分](attachments/jwt三部分.png)
 
 ### JWT的用法
-请求JWT的时候可能会把自身的内容发给后端，后端明确后再将JWT发送给前端。前端需要**手动去维护**JWT，<font style="color:#E8323C;">将JWT存放在</font>`<font style="color:#E8323C;">localstorage</font>`<font style="color:#E8323C;">里，然后配置一下</font>`<font style="color:#E8323C;">axios</font>`<font style="color:#E8323C;">，让所有请求头的</font>`<font style="color:#E8323C;">header</font>`<font style="color:#E8323C;">的</font>`<font style="color:#E8323C;">Authorization</font>`<font style="color:#E8323C;">带上JWT</font>。在下一次请求的时候服务器会去看`header`头中`Authorization`**是**否有JWT，解码后的内容和服务器发送的内容**是否一致**，一致后在返回数据给前端。
+请求JWT的时候可能会把自身的内容发给后端，后端明确后再将JWT发送给前端。前端需要**手动去维护**JWT，将JWT存放在`localstorage`里，然后配置一下`axios`，让所有请求头的`header`style="color:#E8323C;的`Authorization`带上JWT。在下一次请求的时候服务器会去看`header`头中`Authorization`**是**否有JWT，解码后的内容和服务器发送的内容**是否一致**，一致后在返回数据给前端。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661755825644-b7d6956a-48c8-4ee9-9143-2500a9480c85.png)
+![jwt前端解码](attachments/jwt前端解码.png)
 
 ### 后端实现JWT
 #### 编写测试用例

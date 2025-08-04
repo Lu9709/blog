@@ -137,7 +137,7 @@ const onSubmit = async (e: Event) => {
 
 然后在`sign_in`页面随便输入验证码然后登录，可以发现实际请求的接口返回的状态码是422，但是使用mock函数返回自己模拟的参数。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1663598397690-182f424e-272f-4338-ab18-05c4e826dcc5.png)
+![登陆验证码](attachments/登陆验证码.png)
 
 ### 完成Tag列表Mock
 #### 全局声明Tag类型

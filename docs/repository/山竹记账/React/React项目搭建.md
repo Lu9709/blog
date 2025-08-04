@@ -1,6 +1,6 @@
 # React项目搭建
 ### 配置开发环境
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1665755735548-0a00365e-720e-480a-88bd-3c8fe9ccb7c9.png)
+![项目实践步骤](attachments/项目实践步骤.png)
 
 使用vite创建项目，可以通过`npm info create-vite versions`查看vite的版本。
 
@@ -61,7 +61,7 @@ cd -
 },
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1665761019117-8056fe4b-d391-4caf-951f-598db1628c7d.png)
+![react组件](attachments/react组件.png)
 
 ### eslint
 关于eslint的配置，可以使用eslint antfu的。

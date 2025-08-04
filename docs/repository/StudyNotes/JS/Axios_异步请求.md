@@ -7,7 +7,7 @@ Axios 是一个基于 [promise](https://javascript.info/promise-basics) 网络�
 
 #### get方法案例
 
-```
+```js
 const axios = require('axios');
 
 // 向给定ID的用户发起请求
@@ -94,7 +94,7 @@ axios.post('/user', {
 
 这些是创建请求时可以用的配置选项。只有`url`是必需的。如果没有指定`method`，请求将默认使用`GET` 方法。
 
-```
+```js
 {
   // `url` 是用于请求的服务器 URL
   url: '/user',
@@ -259,7 +259,7 @@ axios.post('/user', {
 ```
 ### 响应结构
 
-```
+```js
 {
   // `data` 由服务器提供的响应
   data: {},
@@ -290,14 +290,14 @@ axios.post('/user', {
 
 #### 全局 axios 默认值
 
-```
+```js
 axios.defaults.baseURL = 'https://api.example.com';
 axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 ```
 #### 自定义实例默认值
 
-```
+```js
 // 创建实例时配置默认值
 const instance = axios.create({
   baseURL: 'https://api.example.com'
@@ -310,7 +310,7 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 配置将会按优先级进行合并。它的顺序是：在[lib/defaults.js](https://github.com/axios/axios/blob/master/lib/defaults.js#L28)中找到的库默认值，然后是实例的`defaults`属性，最后是请求的`config`参数。后面的优先级要高于前面的。下面有一个例子。
 
-```
+```js
 // 使用库提供的默认配置创建实例
 // 此时超时配置的默认值是 `0`
 const instance = axios.create();
@@ -328,7 +328,7 @@ instance.get('/longRequest', {
 
 在请求或响应被`then`或`catch`处理前拦截它们。
 
-```
+```js
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
@@ -351,13 +351,13 @@ axios.interceptors.response.use(function (response) {
 ```
 如果你稍后需要移除拦截器，可以这样：
 
-```
+```js
 const myInterceptor = axios.interceptors.requeset.use(function { /*...*/})
 axios.interceptors.requeset.reject(myInterceptor)
 ```
 可以给自定义的`axios`实例添加拦截器。
 
-```
+```js
 const instance = axios.create();
 instance.interceptors.request.use(function () {/*...*/});
 ```
@@ -367,7 +367,7 @@ instance.interceptors.request.use(function () {/*...*/});
 
 从axios v0.22.0开始，`Axios`支持以`fetch API`方式—— [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) 取消请求。
 
-```
+```js
 const controller = new AbortController();
 
 axios.get('/foo/bar', {
@@ -384,7 +384,7 @@ Axios 的 cancel token API 是基于被撤销 [cancelable promises proposal](htt
 
 此 API 从 v0.22.0 开始已被弃用，不应在新项目中使用。
 
-```
+```js
 const CancelToken = axios.CancelToken;
 const source = CancelToken.source();
 

@@ -9,7 +9,7 @@ Set的原型上继承了很多方法和属性，如下图所示。
 
 向Set加入值的时候，不会发生类型转换（字符串和数值）。Set内部判断两个值是否不同，是采用类似于"==="相等运算符的算法。只有一个特例，Set加入值时候认为NaN等于自身，但精确相等运算符NaN不等于自身。
 
-```
+```js
 NaN === NaN //fasle
 let set = new Set();
 let a = NaN;
@@ -20,7 +20,7 @@ set // Set {NaN}
 ```
 `Array.from`可以将Set结构转变为数组。
 
-```
+```js
 const items = new Set([1, 2, 3, 4, 5]);
 const array = Array.from(items);
 // Array.from 数组去重方法
@@ -52,7 +52,7 @@ function dedupe(array){
 
 #### Set实现并集(Union)、交集(Intersect)、差集(Difference)
 
-```
+```js
 let a = new Set([1,2,3])
 let b = new Set([4,3,2])
 //并集
@@ -71,7 +71,7 @@ Map数据结构类似于对象，也是键值对的集合(Hash结构)，"键"的
 
 Map可以接受一个数组作为参数。该数组的成员是一个个表示键值对的数组。
 
-```
+```js
 const map = new Map([
   ['name','张三'],
   ['title','Author']
@@ -86,7 +86,7 @@ items.forEach(([key,value])=> map.set(key,value));
 ```
 Map的键实际上跟内存地址绑定的，只要内存地址不一样就视为两个键。简单类型的值（数字、字符串、布尔值）,只要两个值严格相等，Map就视为一个键。（NaN不严格等于自身，但Map将其视为同一个键）
 
-```
+```js
 let map = new Map();
 
 map.set(-0, 123);
@@ -126,7 +126,7 @@ map.get(NaN) // 123
 
 1. Map 转为 数组
 
-```
+```js
 let x = new Map()
 .set(1,'1')
 .set({obj:'name'},true)
@@ -135,7 +135,7 @@ let x = new Map()
 ```
 2. 数组 转为 Map
 
-```
+```js
 new Map([
 	[1,'1'],
   [{obj:'name'},true]
@@ -145,8 +145,8 @@ new Map([
 
 如果Map的键都是字符串，它可以无损转为对象，如果有非字符串的键名就转为字符串。
 
-```
-function strMaptoObj(strMap){
+```js
+function strMapToObj(strMap){
 	let obj = Object.create(null)
   for(let [k,v] of strMap){
   	obj[k] = v
@@ -156,11 +156,11 @@ function strMaptoObj(strMap){
 let x = new Map()
 .set(1,'1')
 .set({obj:'name'},true)
-strMaptoObj(x)
+strMapToObj(x)
 ```
 4. 对象 转为 Map
 
-```
+```js
 let obj = {"a":1,"b":2}
 let map = new Map(Object.entries(obj))
 function objToStrMap(obj){
@@ -175,7 +175,7 @@ objToStrMap({yes: true, no: false})
 ```
 5. Map 转为 JSON
 
-```
+```js
 //Map键名为字符串
 function strMapToJson(strMap) {
   return JSON.stringify(strMapToObj(strMap));
@@ -195,7 +195,7 @@ mapToArrayJson(myMap)
 ```
 6. JSON 转为 Map
 
-```
+```js
 function jsonToStrMap(jsonStr) {
   return objToStrMap(JSON.parse(jsonStr));
 }

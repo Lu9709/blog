@@ -2,7 +2,7 @@
 
 可以通过时序图来进行开发。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661601047208-02ca3a5b-9f8e-48ad-9b9e-81f7fa5bb64b.png)
+![时序图](./attachments/时序图.png)
 
 ### 测试驱动开发就是先测试再编码
 **方法论TDD测试驱动开发**
@@ -91,7 +91,7 @@ end
 
 修改后在执行`bin/rake docs:generate`，之后可以在启动的接口页面服务中看到如下的内容。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661607832636-09f23936-4db8-4a13-aa9f-986c448beb75.png)
+![验证码API](attachments/验证码API.png)
 
 ### 解决请求中的JSON问题
 配置`spec_helper.rb`给在请求类型为acceptance的带上请求头参数。
@@ -102,7 +102,7 @@ RspecApiDocumentation.configure do |config|
   config.request_body_formatter = :json
 end
 RSpec.configure do |config|
-  # 配置在每次请求之前如果发现请求的类型是accpetance的就给加上请求头参数
+  # 配置在每次请求之前如果发现请求的类型是acceptance的就给加上请求头参数
   config.before(:each) do |spec|
     if spec.metadata[:type].equal? :acceptance
       header 'Accept', 'application/json'
@@ -121,7 +121,7 @@ end
 
 解决显示为接口文档页面body显示`[binary data]`的问题，[详见issue](https://github.com/zipmark/rspec_api_documentation/issues/456)。
 
-需要创建文件`config/initializers/rspec_api_documentation.rb`，定义`repsonse_body`的`encode`。
+需要创建文件`config/initializers/rspec_api_documentation.rb`，定义`response_body`的`encode`。
 
 ```ruby
 # 解决响应中的JSON显示二进制内容的issue
@@ -172,5 +172,6 @@ end
 
 重新执行rake后可以看到修改后的接口文档，测试接口文档的内容如下所示。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661612151707-95e36044-794b-4405-ae46-8ae0a2d0b4ef.png)![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661612163573-37dfd2e4-ca78-4f2b-9512-c17a402e80b9.png)
+![接口文档-1](attachments/接口文档-1.png)
+![接口文档-2](attachments/接口文档-2.png)
 

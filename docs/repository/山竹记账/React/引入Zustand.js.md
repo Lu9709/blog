@@ -10,7 +10,7 @@ const onSkip = () => {
 
 关于路由，vue有路由守卫，而`react-router`中没有路由守卫，官网中的`action`只是提供一种方式用于提供数据提交。react的路由守卫需要自己写方法，而且react之间父子路径互不影响。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1667397150984-ea3520ea-d3cb-4a17-8677-d873a38ce340.png)
+![router路由](attachments/router路由.png)
 
 修改`router.tsx`的路由，添加`/home`路由，并修改`MainLayout.tsx`组件，如果`localStorage`内存储着`hasRead`则`<Navigate to='/home' />`否则显示下一页的内容。
 
@@ -148,5 +148,5 @@ export const Root: React.FC = () => {
 ### 补充
 修改vscode的setting防止tab快捷键按错。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1667396431872-f8d8ddf1-9937-4d96-bd27-37f9e17cd367.png)
+![vscode tab键](attachments/vscode_tab键.png)
 

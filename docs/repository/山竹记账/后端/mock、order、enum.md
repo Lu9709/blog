@@ -55,9 +55,9 @@ resource "验证码" do
 end 
 ```
 
-使用rails console 手动测试email，执行`bin/rails c`，进入控制台的rail环境。创建一个validaton_code，`validation_code = ValidationCode.new email:'919041098@qq.com', kind: 'sign_in',code: '1234'`，然后在数据库保存`validation_code.save`，然后在执行测试API的方法`UserMailer.welcome_email('919041098@qq.com').deliver`。之后可以在邮箱中看到发送的邮件。
+使用rails console 手动测试email，执行`bin/rails c`，进入控制台的rail环境。创建一个validation_code，`validation_code = ValidationCode.new email:'919041098@qq.com', kind: 'sign_in',code: '1234'`，然后在数据库保存`validation_code.save`，然后在执行测试API的方法`UserMailer.welcome_email('919041098@qq.com').deliver`。之后可以在邮箱中看到发送的邮件。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661686976317-9cb2af12-b1fb-4c1f-bef9-0111f2a52491.png)
+![验证码](attachments/验证码.png)
 
 ### 重构create_validation_code
 rails优化的一个特点是将controller层写的短一点，如果有数据相关的操作尽量写在model层。
@@ -128,7 +128,7 @@ end
 
 之后可以在ruby环境下的终端重启一下刚写的代码`reload!`。然后在进行验证`v1 = ValidationCode.new email:'919041098@qq.com', kind: 'sign_in',code: '1234'`，然后答应v1，就可以看到创建的内容，或是通过插件查看整个表，如下所示。若是要清空数据库可以执行`ValdiationCode.destory_all`。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/2749296/1661689271647-02ea4578-e8eb-46f1-99a0-a110dbb5f175.png)
+![数据库Mail内容](attachments/数据库Mail内容.png)
 
 ### 防止重复发送验证码
 防止发送验证码太频繁，然后返回429。

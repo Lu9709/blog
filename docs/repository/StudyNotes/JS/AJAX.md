@@ -6,7 +6,7 @@ AJAX是**异步的JavaScript和XML**。使用**XMLHttpRequest对象与服务器�
 
 ## 步骤一：创建对象实例
 
-```
+```js
 if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
     httpRequest = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE 6 and older
@@ -15,7 +15,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 ```
 ## 步骤二：创建请求，并指定请求方法、URL及验证信息
 
-```
+```js
 httpRequest.open('GET', 'http://www.example.org/some.file', true);
 ```
 此时是指为请求做好准备。
@@ -32,7 +32,7 @@ httpRequest.open('GET', 'http://www.example.org/some.file', true);
 
 ## 步骤三：执行响应任务
 
-```
+```js
 httpRequest.onreadystatechange = nameOfTheFunction;
 nameOfTheFunction(){
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -86,9 +86,9 @@ httpRequest.send();
 
 GET的请求方法是 GET 请求，用于向服务器查询某些信息。必要时，需要在 GET 请求的 URL后面添加查询字符串参数。 查询字符串中的每个名和值都必须使用encodeURIComponent()编码，所有名/值对必须以和号（&）分隔
 
-encodeURIComponent 转义除了如下所示外的所有字符：A-Z a-z 0-9 - \_ . ! ~ \* ' ( )
+`encodeURIComponent` 转义除了如下所示外的所有字符：A-Z a-z 0-9 - \_ . ! ~ \* ' ( )
 
-```
+```js
 xhr.open("get", "example.php?name1=value1&name2=value2", true);
 function addURLParam(url, name, value) {
   url += (url.indexOf("?") == -1 ? "?" : "&");
@@ -98,19 +98,19 @@ function addURLParam(url, name, value) {
 ```
 ## Post请求
 
-Post请求需要设置Cotent-Type，告诉服务器数据类型为什么类型
+Post请求需要设置`Content-Type`，告诉服务器数据类型为什么类型
 
 常用请求头为：
 
 * `application/x-www-form-urlencoded` 普通字段的表单数据
 * `multipart/form-data` 文件或二进制数据
-* `appliction/json`
+* `application/json`
 
 通过`XMLHttpRequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded")`
 
 发送JSON数据
 
-```
+```js
 const xhr = new XMLHttpRequest()
 xhr.open("POST","url",true)
 xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
@@ -125,7 +125,7 @@ xhr.send(JSON.stringify(data))
 
 完整版：
 
-```
+```js
  var request = new XMLHttpRequest()
  request.open('GET', '/a/b/c?name=ff', true);
  request.onreadystatechange = function () {
@@ -138,7 +138,7 @@ xhr.send(JSON.stringify(data))
 
 load事件不需要检查readyState属性。
 
-```
+```js
  var request = new XMLHttpRequest()
  request.open('GET', '/a/b/c?name=ff', true)
  request.onload = ()=> console.log(request.responseText)

@@ -2,15 +2,15 @@
 
 `Object`是JavaScript的一种**复杂数据类型**。可以通过[Object()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)构造函数或使用[对象字面量](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的方式创建对象。
 
-基本所有对象都是`Object`的实例，一个典型的对象从`Obect.prototype`继承属性（包括方法），尽管这些属性可能被**覆盖**或**重写**。唯一不从`Object.prototype`继承的对象是那些**null原型对象**，或者是从其他`null`原型对象继承而来的对象。
+基本所有对象都是`Object`的实例，一个典型的对象从`Object.prototype`继承属性（包括方法），尽管这些属性可能被**覆盖**或**重写**。唯一不从`Object.prototype`继承的对象是那些**null原型对象**，或者是从其他`null`原型对象继承而来的对象。
 
 ### null 原型对象
 
-可以通过`Object.create(null)`或定义`\_\_proto\_\_: null`的对象字面量语法来创建`null`原型对象，可以通过`Object.setPrototypeOf(obj, null)`将现有对象的原型改为`null`。
+可以通过`Object.create(null)`或定义`__proto__: null`的对象字面量语法来创建`null`原型对象，可以通过`Object.setPrototypeOf(obj, null)`将现有对象的原型改为`null`。
 
-注意：对象字面量中的`\_\_proto\_\_`键不同于已弃用的`Object.prototype.\_\_proto\_\_`属性
+注意：对象字面量中的`__proto__`键不同于已弃用的`Object.prototype.__proto__`属性
 
-```
+```js
 const obj = Object.create(null)
 const obj2 = { __proto__: null }
 ```
@@ -26,7 +26,7 @@ const obj2 = { __proto__: null }
 * 如果该值已经是一个对象，则返回该值。
 * 否则，返回与定值对应的类型的对象。例如，传递BigInt基本类型返回一个BigInt封装对象。
 
-```
+```js
 const o = new Object()
 const o = new Object(undefined)
 const o = new Object(null)
@@ -35,7 +35,7 @@ const o = new Object(null)
 
 #### [Object.assign()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
-Object.assign(target, ...sources)
+`Object.assign(target, ...sources)`
 
 **描述**：将**一个**或**多个源对象**的所有**可枚举自有属性**的值**复制**到**目标对象**中。
 
@@ -48,7 +48,7 @@ Object.assign(target, ...sources)
 
 **案例**：
 
-```
+```js
 const target = { a: 1, b: 2 }
 const source = { b: 4, c: 5 }
 
@@ -61,9 +61,9 @@ console.log(returnTarget === target); // Expected ouput: true
 
 #### [Object.create()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
-Object.create(proto)
+`Object.create(proto)`
 
-Object.create(proto, propertiesObject)
+`Object.create(proto, propertiesObject)`
 
 **描述**：使用**指定**的**原型对象和属性**创建一个**新对象**。
 
@@ -74,7 +74,7 @@ Object.create(proto, propertiesObject)
 
 **案例**：
 
-```
+```js
 const person = {
   isHuman: false,
   introduction: function () {
@@ -90,7 +90,7 @@ me.printIntroduction();
 ```
 使用`Object.create()`实现类式继承。
 
-```
+```js
 // Shape——父类
 function Shape() {
   this.x = 0;
@@ -124,7 +124,7 @@ console.log(rect instanceof Shape); // true
 ```
 #### [Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
-Object.defineProperty(obj, prop, descriptor)
+`Object.defineProperty(obj, prop, descriptor)`
 
 **描述**：向对象添加一个由给**定描述符**描述的**命名属性**。
 
@@ -141,16 +141,14 @@ Object.defineProperty(obj, prop, descriptor)
 * **数据描述符** 是一个具有可写或不可写值的属性。
 * **访问器描述符** 是由 getter/setter 函数对描述的属性。
 
-configurable
-
-当设置为`false`时，**默认值为**`false`。
+`configurable` 当设置为`false`时，**默认值为**`false`。
 
 * 该属性的类型**不能**在数据属性和访问器属性之间**更改**
 * 该属性不可被**删除**
 * 其描述符的其他属性也**不能**被**更改**(但是，如果它是一个可写的数据描述符，则`value`可以被更改，`writeable`可以更改为`false`)
 * 如果旧描述符的`configurable`特性被设置为`false`，则该属性被称为**不可配置**的，**无法更改不可配置的访问器属性的任何特性**，也**不能**将其在**数据类型和访问器类型之间切换**。对于具有`writable: true`的数据属性，可以修改其值并将`writable`特性从`true`改为`false`，对于其他情况一律会抛出报错`TypeError`。
 
-```
+```js
 const obj = {};
 Object.defineProperty(obj, 'example', {
   value: 42,
@@ -190,11 +188,11 @@ Object.defineProperty(obj, 'num', {
 });
 
 ```
-enumerable
+`enumerable`
 
 当且仅当该属性在**对应对象**的**属性枚举**中**出现**时，值为`true`。**默认值为**`false`。
 
-```
+```js
 const obj = {};
 Object.defineProperty(obj, 'example', {
   value: 18,
@@ -214,21 +212,20 @@ console.log(obj.example); // 输出 18
 ```
 **数据描述符**还具有以下可选键值：
 
-value
+* `value`
+  与属性相关联的值。可以是任何有效的JavaScript值(数字、对象、函数等)。**默认值为**`undefined`
 
-与属性相关联的值。可以是任何有效的JavaScript值(数字、对象、函数等)。**默认值为**`undefined`
+* `writable`
 
-writable
+  如果与属性相关联的值可以使用赋值运算符更改，则为`true`。**默认值为**`false`。
 
-如果与属性相关联的值可以使用赋值运算符更改，则为`true`。**默认值为**`false`。
+  **访问器描述符**还具有以下可选键值：
 
-**访问器描述符**还具有以下可选键值：
-
-get
+* `get`
 
 用作属性`getter`的函数，如果没有`getter`则为`undefined`。当访问该属性时，将不带参地调用此函数，并将`this`设置为通过该属性访问的对象。返回值将被用作该属性的值。**默认值为**`undefined`。
 
-set
+* `set`
 
 用作属性`setter`的函数，如果没有`setter`则为`undefined`。当该属性被赋值时，将调用此函数，并带有一个参数，并将`this`设置为通过该属性分配的对象。**默认值为**`undefined`。
 
@@ -236,7 +233,7 @@ set
 
  **添加属性**
 
-```
+```js
 const obj = {};
 // 1. 使用 null 原型：没有继承的属性
 const descriptor = Object.create(null);
@@ -255,7 +252,7 @@ Object.defineProperty(obj, "key2", {
 ```
 **自定义setter和getter**
 
-```
+```js
 function Archiver() {
   let task = null
   const archive = []
@@ -285,7 +282,7 @@ arc.getArchiver() // [{ val: 'work' }, { val: 'rest' }]
 
 #### [Object.defineProperties()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties)
 
-Object.defineProperties(obj, props)
+`Object.defineProperties(obj, props)`
 
 **描述**：向对象添加多个由给定描述符描述的命名属性。
 
@@ -300,7 +297,7 @@ Object.defineProperties(obj, props)
 
 #### [Object.entries()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 
-Object.entries(obj)
+`Object.entries(obj)`
 
 **描述**：返回包含给定对象自有可枚举字符串属性的所有 [key, value] 数组。
 
@@ -310,7 +307,7 @@ Object.entries(obj)
 
 **案例**：
 
-```
+```js
 const obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
@@ -333,7 +330,7 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 `undefined`和`null`不能被强制转换为对象，会立即抛出报错。只有**字符串**可以有自己的**可枚举属性**，所有其他基本类型均返回一个空数组。
 
-```
+```js
 // 字符串具有索引作为可枚举的自有属性
 console.log(Object.entries("foo"));
 // [ ['0', 'f'],['1', 'o'], ['2', 'o'] ]
@@ -342,9 +339,9 @@ console.log(Object.entries(100)); // []
 ```
 **将Object转换成Map**
 
-`[Map()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)`构造函数接受一个`entries`可迭代对象。使用`Object.entries`，可以很容易的将`Object`转换成`Map`。
+[Map()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)构造函数接受一个`entries`可迭代对象。使用`Object.entries`，可以很容易的将`Object`转换成`Map`。
 
-```
+```js
 const obj = { foo: "bar", baz: 42 };
 const map = new Map(Object.entries(obj));
 console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
@@ -353,7 +350,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 使用数组解构语法，可以很容易地遍历对象。
 
-```
+```js
 // 使用 for...of 循环
 const obj = { a: 5, b: 7, c: 9 }
 for (const [key, value] of Object.entries(obj)) {
@@ -366,7 +363,7 @@ Object.entries(obj).forEach(([key, value])) => {
 ```
 #### [Object.freeze()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
 
-Object.freeze(obj)
+`Object.freeze(obj)`
 
 **描述**：冻结一个对象。其他代码**不能删除**或**更改其任何属性**。
 
@@ -380,7 +377,7 @@ Object.freeze(obj)
 
 **案例**：
 
-```
+```js
 const obj = {
   prop() {},
   foo: 'bar'
@@ -403,7 +400,7 @@ obj.foo = 'test'
 ```
 **冻结数组**
 
-```
+```js
 const a = [0]
 Object.freeze(a) // 数组现在开始无法被修改
 a[0] = 1 // 静默失败
@@ -414,7 +411,7 @@ a.push(2) // 抛出 TypeError
 
 因为调用`Object.freeze(object)`的结果仅适用于`object`本身的**直接属性**，并只会在`object`上防止未来的属性添加、删除、或重新赋值操作的目标。如果这些属性的值本身是**复杂引用类型**，这些值**不会**被**冻结**，并且可能成为属性添加、删除，或重新赋值操作的目标。
 
-```
+```js
 const person = {
   name: 'Tom',
   gender: 'man',
@@ -431,7 +428,7 @@ console.log(person.address.city) // "WenZhou"
 ```
 为了让对象不可变，需要进行**递归**地冻结每个对象类型的属性（**深冻结**）。深冻结对象时，需避免正在被处理的对象。但仍有可能有会冻结不应该被冻结的对象，例如`window`。
 
-```
+```js
 function deepFreeze(object) {
   const propNames = Reflect.ownKeys(object)
   for (const name of propNames) {
@@ -445,7 +442,7 @@ function deepFreeze(object) {
 ```
 #### [Object.fromEntries()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
 
-Object.fromEntries(iterable)
+`Object.fromEntries(iterable)`
 
 **描述**：从一个包含 **[key, value]** 对的**可迭代对象**中返回一个**新**的**对象**（[Object.entries](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) 的反操作）。
 
@@ -462,7 +459,7 @@ Object.fromEntries(iterable)
 
 **将Map转换成对象**，通过`Object.fromEntries`，你可以将`Map`转换成`Object`：
 
-```
+```js
 const map = new Map([
   ['foo', 'bar'],
   ['baz', 42]
@@ -472,7 +469,7 @@ console.log(obj) // { foo: 'bar', baz: 42 }
 ```
 **将Array转换成对象**，通过`Object.fromEntries`，你可以将`Array`转换成`Object`：
 
-```
+```js
 const arr = [
   ["0", "a"],
   ["1", "b"],
@@ -483,7 +480,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ```
 **对象转换**，通过`Object.fromEntries`、其逆操作`Object.entries()`和数组操作方法。
 
-```
+```js
 const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
@@ -494,7 +491,7 @@ console.log(object2); // { a: 2, b: 4, c: 6 }
 ```
 #### [Object.getOwnPropertyDescriptor()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
 
-Object.getOwnPropertyDescriptor(obj, prop)
+`Object.getOwnPropertyDescriptor(obj, prop)`
 
 **描述**：返回**一个**对象的**已命名属性**的**属性描述符**。
 
@@ -516,7 +513,7 @@ Object.getOwnPropertyDescriptor(obj, prop)
 
 **案例**：
 
-```
+```js
 let o, d;
 
 o = {
@@ -570,7 +567,7 @@ console.log(d);
 ```
 #### [Object.getOwnPropertyDescriptors()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
 
-Object.getOwnPropertyDescriptors(obj)
+`Object.getOwnPropertyDescriptors(obj)`
 
 **描述**：返回一个包含对象**所有自有属性**的**属性描述符**的对象。
 
@@ -582,7 +579,7 @@ Object.getOwnPropertyDescriptors(obj)
 
 #### [Object.getOwnPropertyNames()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
 
-Object.getOwnPropertyNames(obj)
+`Object.getOwnPropertyNames(obj)`
 
 **描述**：返回一个包含给定对象的**所有自有可枚举**和**不可枚举属性名称**的**数组**。
 
@@ -592,7 +589,7 @@ Object.getOwnPropertyNames(obj)
 
 注意：在ES5，如果该方法的参数不是一个对象，会抛出TypeError；在ES2015中，非对象参数会被强制转换为对象。
 
-```
+```js
 Object.getOwnPropertyNames("foo");
 // TypeError: "foo" is not an object (ES5 code)
 
@@ -601,7 +598,7 @@ Object.getOwnPropertyNames("foo");
 ```
 **案例**：
 
-```
+```js
 const arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort());
 // ["0", "1", "2", "length"]
@@ -636,16 +633,16 @@ console.log(Object.getOwnPropertyNames(myObj).sort()); // ["foo", "getFoo"]
 ```
 **只获取不可枚举的属性**
 
-```
+```js
 const target = myObject
-const enumAndNonenum = Object.getOwnPropertyNames(target)
+const enumAndNonEnum = Object.getOwnPropertyNames(target)
 const enumOnly = new Set(Object.keys(target))
-const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key))
-console.log(nonenumOnly)
+const nonEnumOnly = enumAndNonEnum.filter((key) => !enumOnly.has(key))
+console.log(nonEnumOnly)
 ```
 #### [Object.getOwnPropertySymbols()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
 
-Object.getOwnPropertySymbols(obj)
+`Object.getOwnPropertySymbols(obj)`
 
 **描述**：返回一个数组，它包含了指定对象所有自有 symbol 属性。
 
@@ -655,7 +652,7 @@ Object.getOwnPropertySymbols(obj)
 
 **案例**：
 
-```
+```js
 const obj = {};
 const a = Symbol("a");
 const b = Symbol.for("b");
@@ -671,7 +668,7 @@ console.log(objectSymbols[0]); // Symbol(a)
 ```
 #### [Object.getPrototypeOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
 
-Object.getPrototypeOf(obj)
+`Object.getPrototypeOf(obj)`
 
 **描述**：返回指定对象的原型（内部的 [[Prototype]] 属性）。
 
@@ -681,14 +678,14 @@ Object.getPrototypeOf(obj)
 
 **案例**：
 
-```
+```js
 const proto = {}
 const obj = Object.create(proto)
 Object.getPrototypeOf(obj) === proto // true
 ```
 #### [Object.hasOwn()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
 
-Object.hasOwn(obj, prop)
+`Object.hasOwn(obj, prop)`
 
 **描述**：如果指定属性是指定对象的自有属性，则返回`true`，否则返回`false`。如果该属性是继承的或不存在，则返回`false`。
 
@@ -703,7 +700,7 @@ Object.hasOwn(obj, prop)
 
 **使用hasOwn去测试属性是否存在**
 
-```
+```js
 const example = {};
 Object.hasOwn(example, "prop"); // false——目标对象的属性 'prop' 未被定义
 
@@ -720,7 +717,7 @@ Object.hasOwn(example, "prop"); // true——目标对象本身的属性存在�
 
 区分直接属性和通过原型链继承的属性：
 
-```
+```js
 const example = {};
 example.prop = "exists";
 
@@ -736,7 +733,7 @@ Object.hasOwn(example, "hasOwnProperty"); // 返回 false
 ```
 **迭代对象的属性**
 
-```
+```js
 const example = {
   foo: true,
   bar: true
@@ -747,7 +744,7 @@ for (const name of Object.keys(example)) {
 ```
 如果使用`for...in`，可以使用`Object.hasOwn()`跳过继承属性：
 
-```
+```js
 const example = { foo: true, bar: true };
 for (const name in example) {
   if (Object.hasOwn(example, name)) {
@@ -759,14 +756,14 @@ for (const name in example) {
 
 数组中的元素被定义为直接属性，所以可以使用`hasOwn()`方法去检查一个指定的索引是否存在：
 
-```
+```js
 const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
 Object.hasOwn(fruits, 3); // true ('Orange')
 Object.hasOwn(fruits, 4); // false——没有定义的
 ```
 #### [Object.is()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
-Objec.is(value1, value2)
+`Object.is(value1, value2)`
 
 **描述**：比较两个值是否相同。所有 NaN 值都相等（这与 [==](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 使用的 IsLooselyEqual 和 [===](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 使用的 IsStrictlyEqual 不同）。
 
@@ -784,7 +781,7 @@ Objec.is(value1, value2)
 
 **案例**：
 
-```
+```js
 // 案例 1：评估结果和使用 === 相同
 Object.is(25, 25); // true
 Object.is("foo", "foo"); // true
@@ -811,7 +808,7 @@ Object.is(NaN, Number.NaN); // true
 ```
 #### [Object.isExtensible()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)
 
-Object.isExtensible(obj)
+`Object.isExtensible(obj)`
 
 **描述**：判断对象是否可扩展（是否可以在它上面添加新的属性）。
 
@@ -823,7 +820,7 @@ Object.isExtensible(obj)
 
 **案例**：
 
-```
+```js
 // 新对象是可拓展的。
 const empty = {};
 Object.isExtensible(empty); // true
@@ -842,7 +839,7 @@ Object.isExtensible(frozen); // false
 ```
 #### [Object.isFrozen()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen)
 
-Object.isFrozen(obj)
+`Object.isFrozen(obj)`
 
 **描述**：判断对象是否已经冻结。
 
@@ -854,7 +851,7 @@ Object.isFrozen(obj)
 
 **案例**：
 
-```
+```js
 // 一个新对象是默认是可扩展的，所以它也是非冻结的。
 Object.isFrozen({}); // false
 
@@ -931,7 +928,7 @@ Object.isSealed(frozen); // true
 ```
 #### [Object.isSealed()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)
 
-Object.isSealed(obj)
+`Object.isSealed(obj)`
 
 **描述**：判断对象是否已经封闭。
 
@@ -943,7 +940,7 @@ Object.isSealed(obj)
 
 **案例**：
 
-```
+```js
 // 新建的对象默认不是密封的。
 const empty = {};
 Object.isSealed(empty); // false
@@ -989,7 +986,7 @@ Object.isFrozen(s3); // true
 ```
 #### [Object.keys()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
-Object.keys(obj)
+`Object.keys(obj)`
 
 **描述**：返回一个包含**所有**给定对象**自有可枚举字符串属性**名称的**数组**。
 
@@ -1001,7 +998,7 @@ Object.keys(obj)
 
 **案例**：
 
-```
+```js
 // 简单数组
 const arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // ['0', '1', '2']
@@ -1030,7 +1027,7 @@ console.log(Object.keys(myObj)); // ['foo']
 ```
 #### [Object.preventExtensions()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)
 
-Object.preventExtensions(obj)
+`Object.preventExtensions(obj)`
 
 **描述**：防止对象的任何扩展。
 
@@ -1046,7 +1043,7 @@ Object.preventExtensions(obj)
 
 **案例**：
 
-```
+```js
 // Object.preventExtensions 将原对象变的不可扩展，并且返回原对象。
 const obj = {};
 const obj2 = Object.preventExtensions(obj);
@@ -1077,7 +1074,7 @@ fail();
 ```
 #### [Object.seal()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal)
 
-Object.seal(obj)
+`Object.seal(obj)`
 
 **描述**：防止其他代码删除对象的属性。
 
@@ -1098,7 +1095,7 @@ Object.seal(obj)
 
 **案例**：
 
-```
+```js
 const obj = {
   prop() {},
   foo: "bar",
@@ -1148,7 +1145,7 @@ Object.defineProperty(obj, "foo", {
 ```
 #### [Object.setPrototypeOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
 
-Object.setPrototypeOf(obj, prototype)
+`Object.setPrototypeOf(obj, prototype)`
 
 **描述**：设置对象的原型（即内部 [[Prototype]] 属性）。
 
@@ -1171,7 +1168,7 @@ Object.setPrototypeOf(obj, prototype)
 
 **使用Object.setPrototypeOf()实现伪类**
 
-```
+```js
 // js 可以通过这样实现类继承
 class Human {}
 class SuperHero extends Human {};
@@ -1202,7 +1199,7 @@ console.log(superMan.speak())
 ```
 #### [Object.values()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 
-Object.values(obj)
+`Object.values(obj)`
 
 **描述**：返回包含给定对象所有自有可枚举字符串属性的值的数组。
 
@@ -1212,7 +1209,7 @@ Object.values(obj)
 
 **案例**：
 
-```
+```js
 const obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
@@ -1257,7 +1254,7 @@ console.log(Object.values(myObj)); // ['bar']
 
 [Object.prototype.hasOwnProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 
-hasOwnProperty(prop)
+`hasOwnProperty(prop)`
 
 **描述**：返回一个布尔值，用于表示一个对象自身是否包含指定的属性，该方法并不会查找原型链上继承来的属性。
 
@@ -1273,14 +1270,14 @@ hasOwnProperty(prop)
 
 **查看索引是否存在**
 
-```
+```js
 const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
 fruits.hasOwnProperty(3); // 返回 true ('Orange')
 fruits.hasOwnProperty(4); // 返回 false——未定义
 ```
 **查看自有属性是否存在**
 
-```
+```js
 const example = {};
 example.hasOwnProperty("prop"); // 返回 false
 
@@ -1297,7 +1294,7 @@ example.hasOwnProperty("prop"); // 返回 true——自有属性存在且值为 
 
 区分直接属性和通过原型链继承的属性：
 
-```
+```js
 const example = {};
 example.prop = "exists";
 
@@ -1313,7 +1310,7 @@ example.hasOwnProperty("hasOwnProperty"); // 返回 false
 ```
 **遍历对象的属性**
 
-```
+```js
 const buz = {
   fog: "stack",
 };
@@ -1328,7 +1325,7 @@ for (const name in buz) {
 ```
 **使用hasOwnProperty作为属性名称**
 
-```
+```js
 const foo = {
   hasOwnProperty() {
     return false;
@@ -1340,7 +1337,7 @@ foo.hasOwnProperty("bar"); // 该重新实现始终返回 false
 ```
 [Object.prototype.isPrototypeOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf)
 
-isPrototypeOf(object)
+`isPrototypeOf(object)`
 
 **描述**：返回一个布尔值，用于表示该方法所**调用的对象**是否在**指定对象**的**原型链中**。
 
@@ -1350,7 +1347,7 @@ isPrototypeOf(object)
 
 **案例**：
 
-```
+```js
 class Foo {}
 class Bar extends Foo {}
 class Baz extends Bar {}
@@ -1374,7 +1371,7 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 [Object.prototype.propertyIsEnumerable()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
 
-propertyIsEnumerable(prop)
+`propertyIsEnumerable(prop)`
 
 **描述**：返回一个布尔值，指示指定属性是否是对象的[可枚举自有属性](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
@@ -1382,7 +1379,7 @@ propertyIsEnumerable(prop)
 
 **案例**：
 
-```
+```js
 const object1 = {};
 const array1 = [];
 object1.property1 = 42;
@@ -1399,7 +1396,7 @@ console.log(array1.propertyIsEnumerable('length'));
 ```
 [Object.prototype.toLocaleString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString)
 
-toLocaleString()
+`toLocaleString()`
 
 **描述**：返回一个表示对象的字符串。该方法旨在由派生对象重写，以达到其特定于语言环境的目的。
 
@@ -1418,7 +1415,7 @@ toLocaleString()
 
 基本的`toLocaleString()`方法只是简单地调用`toString()`。
 
-```
+```js
 const obj = {
   toString() {
     return "My Object";
@@ -1426,11 +1423,11 @@ const obj = {
 };
 console.log(obj.toLocaleString()); // "My Object"
 ```
-**Array重写的tolocaleString()**
+**Array重写的toLocaleString()**
 
 [Array.prototype.toLocaleString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString) 用于将数组值打印成字符串，通过调用每个元素的`toLocaleString()`方法，并使用特定于语言环境的分隔符拼接。例如：
 
-```
+```js
 const testArray = [4, 7, 10];
 
 const euroPrices = testArray.toLocaleString("fr", {
@@ -1443,7 +1440,7 @@ const euroPrices = testArray.toLocaleString("fr", {
 
 [Date.prototype.toLocaleString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) 用于打印成更适合特定语言环境的日期显示。例如：
 
-```
+```js
 const testDate = new Date();
 // "Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
 
@@ -1457,7 +1454,7 @@ const frDate = testDate.toLocaleString("fr");
 
 [Number.prototype.toLocaleString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) 用于打印成更适合特定语言环境的数字显示，例如使用正确的分隔符。例如：
 
-```
+```js
 const testNumber = 2901234564;
 // "2901234564"
 
@@ -1473,7 +1470,7 @@ const frNumber = testNumber.toLocaleString("fr");
 
 [Object.prototype.valueOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)
 
-valueOf()
+`valueOf()`
 
 **描述**：返回指定对象的基本类型值。
 
@@ -1481,7 +1478,7 @@ Object实例的`valueOf()`方法将`this`值转换为对象。该方法旨在被
 
 **案例**：
 
-```
+```js
 const obj = { foo: 1 }
 console.log(obj.valueOf() === obj) // true
 console.log(Object.prototype.valueOf.call('primitive'))
@@ -1489,4 +1486,4 @@ console.log(Object.prototype.valueOf.call('primitive'))
 ```
 ### 参考链接
 
-<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#%E6%8F%8F%E8%BF%B0>
+[Object - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#%E6%8F%8F%E8%BF%B0)

@@ -27,10 +27,7 @@ JavaScript 常被描述为一种基于原型的语言 (prototype-based language)
 3. 创建数组的原型#146(push/prop)，原型\_\_proto\_\_为#268
 4. 创建Function#66，原型为\_\_proto\_\_#306
 5. 让Function.prototype等于#306(有名字了)
-6. 此时发现Function的\_\_proto\_\_和prototype都是#208
-
-此时可以得出`Function.\_\_proto\_\_ === Function.prototype`
-
+6. 此时发现Function的\_\_proto\_\_和prototype都是#208，此时可以得出`Function.\_\_proto\_\_ === Function.prototype`
 7. 用Function创建Object(实际没有名字)
 8. 让Object.prototype等于#268(有名字了)
 9. 用Function创建Array(实际没有名字)
@@ -49,7 +46,7 @@ JavaScript 常被描述为一种基于原型的语言 (prototype-based language)
 
 如果用`new Function()`创建fn，new会将fn的原型\_\_proto\_\_设置为`Function.prototype`，也就是#306。
 
-若是要自己定义构造函数Person，函数里给this加属性，然后Perso自动创建prototype属性和对应的对象#xxx，
+若是要自己定义构造函数Person，函数里给this加属性，然后Person自动创建prototype属性和对应的对象#xxx，
 
 在Person.prototype #xxx上面加属性，用new Person()创建对象p，new会将p的原型\_\_p设为#xxx。
 
@@ -59,10 +56,10 @@ JavaScript 常被描述为一种基于原型的语言 (prototype-based language)
 
 ### 总结
 
-* JS公式：`对象.\_\_proto\_\_ === 其构造函数.prototype`
+* JS公式：`对象.__proto__ === 其构造函数.prototype`
 * 根公理：`Object.prototype`是所有对象的(直接或间接)原型
 
-即 `Object.prototype.\_\_proto\_\_ === null`
+即 `Object.prototype.__proto__ === null`
 
 * 函数公理： 所有函数都是由Function构造的
 
