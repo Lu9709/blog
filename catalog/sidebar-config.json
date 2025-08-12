@@ -349,6 +349,18 @@
             {
               "text": "Axios_异步请求",
               "link": "/repository/StudyNotes/JS/Axios_异步请求"
+            },
+            {
+              "text": "npm、cnpm、yarn、pnpm的区别",
+              "link": "/repository/StudyNotes/JS/npm、cnpm、yarn、pnpm的区别"
+            },
+            {
+              "text": "浏览器数据库 IndexedDB",
+              "link": "/repository/StudyNotes/JS/浏览器数据库IndexedDB"
+            },
+            {
+              "text": "web-worker",
+              "link": "/repository/StudyNotes/JS/web-worker"
             }
           ]
         },
@@ -463,6 +475,10 @@
             {
               "text": "正则从字符串中截取出img标签、以及对应src地址",
               "link": "/repository/StudyNotes/解决方法记录/正则从字符串中截取出img标签、以及对应src地址"
+            },
+            {
+              "text": "大文件分片上传",
+              "link": "/repository/StudyNotes/解决方法记录/大文件分片上传"
             }
           ]
         }
@@ -1127,6 +1143,10 @@
             {
               "text": "输入url后页面渲染流程",
               "link": "/repository/面试题/JS/输入url后页面渲染流程"
+            },
+            {
+              "text": "script标签的async和defer属性",
+              "link": "/repository/面试题/JS/script标签的async和defer属性"
             }
           ]
         },

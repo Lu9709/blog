@@ -1,3 +1,5 @@
+# js图片网络地址转为文件流
+
 1. 创建XMLHttpRequest对象
 2. 设置调用方式为GET
 3. 设置请求头参数：主要设置文件类型
@@ -20,7 +22,7 @@ function getImageFileFromUrl(url, imageName) {
         xhr.responseType = "blob";
         // 加载时处理
         xhr.onload = () => {
-        	// 获取返回结果
+            // 获取返回结果
             blob = xhr.response;
             let imgFile = new File([blob], imageName, { type: 'image/png' });
             // 返回结果

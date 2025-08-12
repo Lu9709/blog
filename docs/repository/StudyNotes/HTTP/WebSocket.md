@@ -303,6 +303,128 @@ function stopHeartbeat() {
 connect();
 ```
 
+### 缓存与背压
+
+> WebSocket 本身不提供背压机制，需通过“**客户端主动控制接收速率** + **缓存策略** + **反向通知**”来实现背压控制。
+> 
+> 常见方法包括：消息队列限流、暂停接收、请求-确认模式、动态调节发送速率等。
+> 
+> 缓存策略：
+> * **内存缓存**：使用数组或队列存储消息，按固定速率处理，但内存有限。
+> * **IndexedDB**：用于持久化存储大量数据，防止内存溢出。
+> * **Web Worker** + **SharedArrayBuffer**：在 Web Worker 中处理数据，与主线程共享内存，避免阻塞。
+>
+1. **消息队列** + **限流处理**
+   
+   将收到的消息放入队列，按固定速率消费。
+    ```js
+    const messageQueue = [];
+    let isProcessing = false;
+    // 接收消息
+    socket.onmessage = (event) => {
+      messageQueue.push(JSON.parse(event.data));
+      // 如果正在处理，不重复启动
+      if (!isProcessing) {
+        processQueue();
+      }
+    };
+    async function processQueue() {
+      isProcessing = true;      
+      while (messageQueue.length > 0) {
+        const chunk = messageQueue.splice(0, 100); // 每次处理 100 条
+        renderMessages(chunk);
+        // 让出主线程，避免卡顿
+        await new Promise(resolve => setTimeout(resolve, 0));
+      }
+      isProcessing = false;
+    }
+    ```
+2. 暂停接收
+   
+    当客户端处理不过来时，暂时**关闭接收**，处理完后再恢复。
+    ```js
+    let shouldPause = false;
+    const buffer = [];
+    socket.onmessage = (event) => {
+      if (shouldPause) {
+        buffer.push(event.data); // 缓存到内存
+        return;
+      }
+      handleMessage(event.data);
+    };
+    // 当处理压力大时
+    function pauseReceiving() {
+      shouldPause = true;
+    }
+    // 处理完后恢复
+    function resumeReceiving() {
+      shouldPause = false;
+      // 处理缓存的消息
+      buffer.splice(0, buffer.length).forEach(handleMessage);
+    }
+    ```
+3. 反向通知
+   
+    客户端定期告诉服务端自己的处理状态，服务端据此调节发送速率。
+    ```js
+    // 客户端：发送处理状态
+    setInterval(() => {
+      socket.send(JSON.stringify({
+        type: 'client_status',
+        queueSize: messageQueue.length,
+        fps: getCurrentFPS()
+      }));
+    }, 5000);
+    // 服务端收到后，动态降低发送频率
+    ```
+
+4. 请求-确认模式（ACK机制）
+    客户端发送消息后，等待服务端收到ACK，确认后再发送下一条。
+    ```js
+    // 客户端
+    socket.onmessage = (event) => {
+      const msg = JSON.parse(event.data);
+      
+      if (msg.type === 'data') {
+        processMessage(msg);
+        
+        // 确认收到
+        socket.send(JSON.stringify({
+          type: 'ack',
+          id: msg.id
+        }));
+      }
+    };
+
+    // 服务端：收到 ACK 后再发送下一批
+    ```
+5. 动态调节发送速率
+
+    前端根据处理情况，请求服务端调整发送频率。
+    ```js
+    let currentLevel = 'high'; // high | medium | low
+
+    function adjustSpeed() {
+      const queueLen = messageQueue.length;
+      
+      if (queueLen > 1000) {
+        currentLevel = 'low';
+      } else if (queueLen > 500) {
+        currentLevel = 'medium';
+      } else {
+        currentLevel = 'high';
+      }
+
+      socket.send(JSON.stringify({
+        type: 'preference',
+        speed: currentLevel
+      }));
+    }
+
+    // 每 5 秒检查一次
+    setInterval(adjustSpeed, 5000);
+    ```
+
 ### 参考链接
 
 > [WebSocket - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket)

@@ -5,13 +5,13 @@ Promise的几种状态：
 * **待定(pending) 初始状态**，既没有被兑现，也没有被拒绝。
 * **已兑现(fulfilled) 操作成功完成**。
 * **已拒绝(rejected) 操作失败**。
-* **已敲定（settled）**已经被兑现（fulfilled）或被拒绝（rejected）
+* **已敲定（settled）** 已经被兑现（fulfilled）或被拒绝（rejected）
 
 Promise的**链式调用**，我们可以用 `promise.then()`，`promise.catch()` 和 `promise.finally()`这些方法将进一步的操作与一个变为已敲定状态的 promise 关联起来。这些方法还会返回一个新生成的 promise 对象。
 
 ### 手写Promise
 
-```
+```js
 class Promise2{
   success = []
   fail = []
@@ -40,9 +40,8 @@ class Promise2{
 }
 
 p1 = new Promise2((resovle,reject)=>{console.log('hi');
-                                     Math.random()>0.5 ? resovle() : reject()
-                                    }
-                 )
+  Math.random()>0.5 ? resovle() : reject()
+})
 p1.then(()=>{console.log('success1')},()=>{console.log('fail1')})
   .then(()=>{console.log('success2')},()=>{console.log('fail2')})
   .then(()=>{console.log('success3')},()=>{console.log('fail3')})
@@ -50,12 +49,12 @@ p1.then(()=>{console.log('success1')},()=>{console.log('fail1')})
 ```
 ### Promise
 
-```
+```js
 fn(){
 	return new Promise((resolve,reject)=>{
-    		 成功时调用 resolve(数据)
-         失败时调用 reject(错误)
-     })
+    成功时调用 resolve(数据)
+    失败时调用 reject(错误)
+  })
  }
 fn().then(success1,fail1).then(success2,fail2)
 ```
@@ -63,7 +62,7 @@ fn().then(success1,fail1).then(success2,fail2)
 
 使用`.then(success,fail)`传入成功和失败函数
 
-```
+```js
 const promise1 = new Promise((resolve, reject) => {
   resolve('Success!');
 });
@@ -75,9 +74,9 @@ promise1.then((value) => {
 ```
 ### Promise.all
 
-`Promise.all()`方法接受返回一个iterable类型(Array，Map，Set),并且只返回一个数组的Promise实例。reslove等所有promise的resolve回调都结束，reject回调时有错立即抛出错误。
+`Promise.all()`方法接受返回一个iterable类型(Array，Map，Set),并且只返回一个数组的Promise实例。resolve等所有promise的resolve回调都结束，reject回调时有错立即抛出错误。
 
-```
+```js
 const promise1 = Promise.resolve(3);
 const promise2 = 42;
 const promise3 = new Promise((resolve, reject) => {
@@ -93,7 +92,7 @@ console.log(values);
 
 `Promise.race(iterable)`方法返回一个 promise，一旦迭代器中的某个promise解决或拒绝，返回的 promise就会解决或拒绝。即迭代器内那个先结束就先返回那个的promise。(类似于跑步谁快，谁拿奖)
 
-```
+```js
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(resolve, 500, 'one');
 });

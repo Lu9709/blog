@@ -75,48 +75,48 @@ function handleValue(val: All) {
 
 ### TS 工具类型 Partial、Required 等的作用和实现
 #### Partial 部分类型
- `**Partial<Type>**`，将类型定义的所有属性都修改为**可选**。
+`Partial<Type>`，将类型定义的所有属性都修改为**可选**。
 
 ```typescript
 type Partial<T> = { [P in keyof T]?: T[P] }
 ```
 
-#### Requried 必填类型
-`**Required<Type>**`，构造一个类型，该类型是由设置为**required**的Type的所有属性组成。<font style="color:#E8323C;">(必填)</font>
+#### Required 必填类型
+`Required<Type>`，构造一个类型，该类型是由设置为**required**的Type的所有属性组成。<span style="color:#E8323C;">(必填)</span>
 
 ```typescript
 type Required<T> = { [P in keyof T]-?: T[P] }
 ```
 
 #### ReadOnly 只读类型
-`**ReadOnly<Type>**`，设置类型只能<font style="color:rgb(232, 50, 60);">只读</font>，<font style="color:rgb(232, 50, 60);">不可以修改</font>。
+`ReadOnly<Type>`，设置类型只能<span color="rgb(232, 50, 60);">只读</span>，<span color="rgb(232, 50, 60);">不可以修改</span>。
 
 ```typescript
 type Readonly<T> = { readonly [P in keyof T]: T[P] }
 ```
 
 #### Exclude 排除类型
-`**Exclude<UnionType, ExcludedMembers>**`，类型中排除一些属性来构成新的联合类型，对照案例可以看出`Exclude`是从T中找出U中没有的元素。
+`Exclude<UnionType, ExcludedMembers>`，类型中排除一些属性来构成新的联合类型，对照案例可以看出`Exclude`是从T中找出U中没有的元素。
 
 ```typescript
 type Exclude<T,U> = T extends U ? never : T
 ```
 
 #### Extract 提取类型
-`**Extract<Type, Union>**`，提取`Type`包含在`Union`中的元素，即取两者的<font style="color:#DF2A3F;">交集</font>。
+`Extract<Type, Union>`，提取`Type`包含在`Union`中的元素，即取两者的<span style="color:#DF2A3F;">交集</span>。
 
 ```typescript
 type Extract<T, U> = T extends U ? T : never
 ```
 
 #### Pick/Omit 排除key类型
-`**Omit<T,K>**`，<font style="color:#DF2A3F;">剔除</font>类型中的一些属性。
+`Omit<T,K>`，<span style="color:#DF2A3F;">剔除</span>类型中的一些属性。
 
 ```typescript
 type Omit<T,K> = Pick<T,Exclude<keyof T,K>>
 ```
 
-`**Pick<Type, Keys>**`，从类型中选择一些属性keys字段构造类型。
+`Pick<Type, Keys>`，从类型中选择一些属性keys字段构造类型。
 
 ```typescript
 type Pick<T,K extends keyof T> = {
@@ -125,7 +125,7 @@ type Pick<T,K extends keyof T> = {
 ```
 
 #### ReturnType 返回类型
-`**ReturnType<Type>**`，接受函数声明，返回函数的返回类型
+`ReturnType<Type>`，接受函数声明，返回函数的返回类型
 
 ```typescript
  type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;

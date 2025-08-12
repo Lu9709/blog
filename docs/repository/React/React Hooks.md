@@ -100,7 +100,7 @@ const App = () => {
 ### useEffect(副作用) [:link:](https://zh-hans.react.dev/reference/react/useEffect)
 
 #### 语法
-`useEffect` 是在浏览器渲染完成后执行,<font style="color: red;">所谓对环境的改变</font>即<font style="color: red;">副作用</font>，<font style="color: red;">处理自己产生的垃圾</font>，可以理解为`afterRender`，<font style="color: red;">每次render后执行的事</font>。
+`useEffect` 是在浏览器渲染完成后执行,<span style="color: red;">所谓对环境的改变</span>即<span style="color: red;">副作用</span>，<span style="color: red;">处理自己产生的垃圾</span>，可以理解为`afterRender`，<span style="color: red;">每次render后执行的事</span>。
 
 ```jsx
 useEffect(() => {
@@ -112,7 +112,7 @@ useEffect(() => {
 }, [dependencies]); // 依赖数组（可选）
 ```
 
-如果有多个`useEffect`，会按照<font style="color: red;">出现次序执行</font>
+如果有多个`useEffect`，会按照<span style="color: red;">出现次序执行</span>
 
 #### 特性与行为
 
@@ -178,7 +178,7 @@ useEffect(() => {
 
 #### 使用场景
 
-在浏览器重新绘制屏幕前计算布局。
+在浏览器**重新绘制**屏幕前计算布局。
 
 ```jsx
 function App() {
@@ -266,11 +266,11 @@ const Child = () => {
 :::
 
 #### React.createContext()
-```plain
-const MyContent = React.creatContext(defalutValue)
+```js
+const MyContent = React.createContext(defaultValue)
 ```
 
-创建一个`Context`对象。当React渲染一个`Context`对象时会读取组件中提供`Provide`中的`context`值，若是无法匹配则使用`defalutValue`的默认值。
+创建一个`Context`对象。当React渲染一个`Context`对象时会读取组件中提供`Provide`中的`context`值，若是无法匹配则使用`defaultValue`的默认值。
 
 ### useReducer(Redux)
 ```jsx
@@ -280,7 +280,7 @@ const [state, dispatch] = useReducer(reducer, initialArg, init);
 步骤：
 
 1. 创建初始值`initialState`
-2. 创建所有操作`reuder(state,action)`
+2. 创建所有操作`reducer(state,action)`
 3. 传给`useReducer`，得到读写的API
 4. 调用写`({type:'操作类型')`
 
@@ -384,8 +384,8 @@ export default App;
 
 [代码参考](https://codesandbox.io/s/priceless-jennings-gyls6)
 
-### React.meno
-React默认会有多余的reder，但props不变就没必要执行一个函数组件。下面的例子中点击后n变化了,m没有变化但是也重新渲染了,为了提高组件性能可以使用`React.memo`将组件包裹起来,可检查`props`变更,若是不变化则<font style="color: red;">复用之前的渲染结果</font>。默认浅层对比，可传入第二个参数来实现。
+### React.memo
+React默认会有多余的render，但props不变就没必要执行一个函数组件。下面的例子中点击后n变化了,m没有变化但是也重新渲染了,为了提高组件性能可以使用`React.memo`将组件包裹起来,可检查`props`变更,若是不变化则<span style="color: red;">复用之前的渲染结果</span>。默认浅层对比，可传入第二个参数来实现。
 
 ```jsx
 function App() {
@@ -443,23 +443,32 @@ const Child2 = React.memo(Child);
 ```
 
 ### userMemo
-第一个参数必须<font style="color: red;">以箭头函数的形式</font>`()=>value`,第二个参数为依赖。当依赖发生调用的时候，才会计算出新的value。依赖不变使用旧值。(类似与Vue2的computed)
+第一个参数必须<span style="color: red;">以箭头函数的形式</span>`()=>value`,第二个参数为依赖。当依赖发生调用的时候，才会计算出新的value。依赖不变使用旧值。(类似与Vue2的computed)
 
 参照上个例子可以添加一行，当n更新时不会打印出Child组件的内容。
 
 ```jsx
 const onClickChild = useMemo(
   ()=>{return ()=>console.log(m)}
-  ,[m])
+,[m])
 ```
 
 ### useCallback
-相当于一个语法糖`useCallback(x=>console.log(x),[m])`等价于`useMemo(()=>x=>console.log(x),[m])`
+相当于一个语法糖 `useCallback(x=>console.log(x),[m])` 等价于 `useMemo(()=>x=>console.log(x),[m])`
 
 上面的代码可以改写为
 
 ```jsx
 const onClickChild = useCallback(()=>console.log(m),[m])
+```
+
+`useCallback` 在 React 内部的简化实现
+
+```jsx
+// 在 React 内部的简化实现
+function useCallback(fn, dependencies) {
+  return useMemo(() => fn, dependencies);
+}
 ```
 
 ### useRef(引用)

@@ -1,5 +1,5 @@
-
-```
+# Echarts toolbox 添加全屏
+```js
 const options = {
   toolbox: {
     feature: {
