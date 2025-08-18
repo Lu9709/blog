@@ -26,3 +26,6 @@
 2. 有些功能 rollup 不支持，需要自己写 rollup 插件
 3. 不支持非现代浏览器
 4. 文件处理时机
+
+**参考链接**
+[Webpack 与 Vite构建工具](https://www.cnblogs.com/crispyChicken/p/18719685)

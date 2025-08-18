@@ -1,5 +1,4 @@
-
-TypeScript X JSX = TSX
+# TypeScript X JSX = TSX
 
 ### 如何使用TSX
 
@@ -10,7 +9,7 @@ TypeScript X JSX = TSX
 
 ### 标签与断言之冲突
 
-```
+```ts
 const header = <h1>hi</h1>
 const a = 1 as unknown
 const b = a as number
@@ -20,11 +19,11 @@ export {header}
 ```
 ![](./attachments/TypeScript_x_JSX_=_TSX_001.png)
 
-在JSX中，只能用`as`断言。
+在JSX中，只能用 `as` 断言。
 
 ### JSX/TSX的本质
 
-```
+```ts
 const header = <h1 name="frank">hi</h1>
 // 编译 后 伪代码 其实还是在写JS/TS，那就是还有类型
 import {create} from 'react_or_vue/jsx'
@@ -36,11 +35,11 @@ const header = create('hi', { name: 'fank' }, 'hi')
 
 JSX的本质就是编译后变成函数，并且是可以配置的。
 
-浏览器的标签都要在全局声明中声明过。创建标签对应的类型是由JSX.Element命名的。
+浏览器的标签都要在全局声明中声明过。创建标签对应的类型是由 `JSX.Element` 命名的。
 
 ### 函数组件
 
-```
+```ts
 const Header = (x: { level: number }, context: unknown) => {
   console.log(x, context)
   return <h1 name="frank">hi</h1>
@@ -49,9 +48,9 @@ const App = <Header level={1} />
 ```
 ### 类组件
 
-接受类型是通过props来接受的。
+接受类型是通过 `props` 来接受的。
 
-```
+```ts
 class ClassHeader {
   props: {
     level: number
@@ -67,7 +66,7 @@ const App2 = <ClassHeader level={1}/>
 ```
 ### 组件共有属性
 
-```
+```ts
 // 函数组件或类组件需要的共有属性
 interface IntrinsicAttributes {
   key: string
@@ -82,9 +81,9 @@ interface IntrinsicClassAttributes<T> {
 ```
 ### JSX如何把内容变成props的属性
 
-需要在全局声明中声明JSX元素的`Children`属性。React内是`Children`，而Vue内相当变成了插槽`slot`。
+需要在全局声明中声明JSX元素的属性。`Children`属性。React内是`Children`，而Vue内相当变成了插槽`slot`。
 
-```
+```ts
 interface ElementChildrenAttributes {
   children: {}
 }
@@ -111,18 +110,18 @@ jsx继承了reactElement
 
 ReactFragment是一个语法糖，类型声明里面为迭代器，[]数组是最简单的迭代器。
 
-ReactProtal是传送门。
+ReactPortal是传送门。
 
 ### React事件处理函数的类型
 
 可以先点击原有的方法去查找类型，然后再去输入。
 
-```
+```ts
 const App = () => {
   const onClick: MouseEventHandler<HTMLInputElement> | undefined = (e) => {
     console.log((e.target as HTMLInputElement).value)
   }
-  const onChange: ChangeEventHanler<HTMLInputElement> | undefined = (e) => {
+  const onChange: ChangeEventHandler<HTMLInputElement> | undefined = (e) => {
     console.log(e.target.value)
   }
   // onchange 触发时机是在失去焦点
@@ -138,7 +137,7 @@ const App = () => {
 
 不完全可以。
 
-```
+```ts
 type BProps = {}
 const B: React.FC<BProps> = (props) => <div>B组件</div>
 type CProps = {}
@@ -162,13 +161,12 @@ const App = () => {
   )
 }
 ```
-参考文章如下所示。
+### 参考文章
 
-<https://segmentfault.com/q/1010000040343011>### React泛型组件是什么？
-
-即能接受泛型的组件。
-
-<https://mp.weixin.qq.com/s/LAXPCJr7Z-X1S7RVMLBwyg>思考题：Vue + TSX 有泛型组件吗？为什么？
-
-答案是没有，vue的组件是一个对象，不是函数做不到
+> [React泛型组件是什么？](https://segmentfault.com/q/1010000040343011)
+>
+> **泛型组件**即能接受泛型的组件。
+> [思考题：Vue + TSX 有泛型组件吗？为什么？](https://mp.weixin.qq.com/s/LAXPCJr7Z-X1S7RVMLBwyg)
+> 
+> 答案是没有，vue的组件是一个对象，不是函数做不到
 
