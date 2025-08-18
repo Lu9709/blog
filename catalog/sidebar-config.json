@@ -453,6 +453,18 @@
             {
               "text": "首屏加载优化",
               "link": "/repository/StudyNotes/构建/首屏加载优化"
+            },
+            {
+              "text": "CI/CD",
+              "link": "/repository/StudyNotes/构建/CI_CD"
+            },
+            {
+              "text": "GitLab CI/CD",
+              "link": "/repository/StudyNotes/构建/GitLab_CI_CD"
+            },
+            {
+              "text": "CDN",
+              "link": "/repository/StudyNotes/构建/CDN"
             }
           ]
         },
