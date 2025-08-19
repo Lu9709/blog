@@ -465,6 +465,14 @@
             {
               "text": "CDN",
               "link": "/repository/StudyNotes/构建/CDN"
+            },
+            {
+              "text": "Docker",
+              "link": "/repository/StudyNotes/构建/Docker"
+            },
+            {
+              "text": "Nginx",
+              "link": "/repository/StudyNotes/构建/Nginx"
             }
           ]
         },

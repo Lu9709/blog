@@ -1,3 +1,5 @@
+# Webpack
+
 ## 基本安装
 
 创建一个目录，初始化`npm`，然后在本地安装`webpack`和`webpack-cli`
@@ -527,3 +529,19 @@ module.exports = {
 * 可以选项`(option)`自定义
 * 把它添加到`plugins`数组中
 * 需要`new`创建一个实例
+
+
+## 构建流程
+
+* **初始化**：读取配置文件，初始化 Compiler 对象。
+* **编译**：从入口文件开始，递归解析依赖，生成依赖图。
+* **构建**：根据依赖图，调用 Loader 处理模块，生成 chunk。
+* **输出**：根据 chunk写入文件系统，生成最终的 bundle文件。
+
+## 优化策略
+
+* **代码分割（Code Splitting）**：通过 `SplitChunksPlugin` 将代码拆分成多个 chunk，实现按需加载。
+* **Tree Shaking**：通过 ES 模块的静态分析，移除未使用的代码。
+* **缓存**：使用 `cache-loader` 或 `hard-source-webpack-plugin` 缓存构建结果，加快构建速度。
+* **懒加载（Lazy Loading）**：通过动态导入（`import()`）实现懒加载，减少初始加载时间。
+* **压缩代码**：使用 `terser-webpack-plugin` 压缩JS代码，使用 `css-minimizer-webpack-plugin` 压缩CSS代码。
