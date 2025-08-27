@@ -97,6 +97,10 @@
             {
               "text": "配置alias别名指令",
               "link": "/repository/StudyNotes/git/配置alias别名指令"
+            },
+            {
+              "text": "解决github connection close by port 22",
+              "link": "/repository/StudyNotes/git/解决git_connection_close_by_port_22"
             }
           ]
         },
@@ -409,6 +413,10 @@
             {
               "text": "力扣刷题",
               "link": "/repository/StudyNotes/算法/力扣刷题"
+            },
+            {
+              "text": "剑指offer",
+              "link": "/repository/StudyNotes/算法/剑指offer"
             }
           ]
         },
@@ -499,6 +507,10 @@
             {
               "text": "大文件分片上传",
               "link": "/repository/StudyNotes/解决方法记录/大文件分片上传"
+            },
+            {
+              "text": "图片懒加载",
+              "link": "/repository/StudyNotes/解决方法记录/图片懒加载"
             }
           ]
         }

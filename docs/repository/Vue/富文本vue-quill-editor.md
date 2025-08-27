@@ -1,7 +1,8 @@
 # 富文本vue-quill-editor
-安装`npm install vue-quill-editor --save`或`yarn add vue-quill-editor`
 
-toolbarOptions可以配置工具栏的选项。
+安装`npm install vue-quill-editor --save` 或 `yarn add vue-quill-editor`
+
+toolbarOptions 可以配置工具栏的选项。
 
 ```javascript
 const toolbarOptions = [
@@ -23,7 +24,7 @@ const toolbarOptions = [
 export default toolbarOptions
 ```
 
-使用vue-quill-editor
+使用 `vue-quill-editor`
 
 ```javascript
 <template>
@@ -93,6 +94,23 @@ export default {
 
 </style>
 ```
+
+### 富文本图片上传 
+
+核心解决策略
+1. 禁止Base64，强制上传为URL
+   * 拦截粘贴 `paste` 事件，自动上传剪贴板图片
+   * 拦截拖拽 `drop` 事件，拖拽图片上传
+   * 替换默认 `image` handler，点击后弹出文件选择并上传
+2. 统一上传流程
+   * 文件类型校验（只允许 jpg/png/webp/gif）
+   * 大小限制（如<=5MB）
+   * 压缩（可选）
+   * 上传服务器（返回URL）
+3. 前端 + 后端双重防护
+   * 前端：限制类型、大小、压缩 `compressor.js`
+   * 后端：校验文件类型、防恶意脚本、存储安全目录
+
 
 由于富文本上传图片时候，会将图片处理成base64的格式，如果图片很大的话，则富文本的内容会很多，提交给后端的时候可能会导致数据库出错。图片上传的时候转为传至OSS服务，返回url地址，大大减少了富文本的内容长度。需要使用`el-upload`组件。
 
@@ -232,3 +250,14 @@ export default {
 
 ```
 
+
+### 富文本防止XSS攻击
+
+富文本编辑器通常会包含用户输入的内容，这些内容可能包含恶意代码，如跨站脚本攻击（XSS）。为了防止XSS攻击，需要对富文本编辑器的输入进行过滤和转义。
+
+可以使用 `DOMPurify` 库来对富文本编辑器的输入进行过滤和转义。`DOMPurify` 库可以将包含恶意代码的HTML字符串转换为安全的HTML字符串，避免XSS攻击。
+
+```js
+import DOMPurify from 'dompurify'
+const clean = DOMPurify.sanitize(dirtyHTML)
+```
