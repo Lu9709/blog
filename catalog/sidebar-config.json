@@ -773,6 +773,22 @@
             {
               "text": "什么是Three",
               "link": "/repository/Web3D/Three.js/什么是Three"
+            },
+            {
+              "text": "第一个Three.js场景:你好，立方体！",
+              "link": "/repository/Web3D/Three.js/第一个Three.js场景:你好，立方体"
+            },
+            {
+              "text": "实现一个简单应用类",
+              "link": "/repository/Web3D/Three.js/实现一个简单应用类"
+            },
+            {
+              "text": "基于物理的渲染和照明",
+              "link": "/repository/Web3D/Three.js/基于物理的渲染和照明"
+            },
+            {
+              "text": "变换和坐标系",
+              "link": "/repository/Web3D/Three.js/变换和坐标系"
             }
           ]
         }
